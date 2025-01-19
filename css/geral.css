@@ -1,0 +1,39 @@
+.zoom-image {
+    transition: transform 0.3s ease;
+  }
+
+  .zoom-image:hover {
+    transform: scale(1.2);
+  }
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #343a40;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #6c757d;
+    border-radius: 10px;
+  }
+
+  .offcanvas {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  @media (max-width: 767px) {
+    .col-12.col-md-3 {
+      width: 100% !important;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+  }
