@@ -18,7 +18,7 @@
   <nav class="navbar bg-dark fixed-top border-body shadow-lg" data-bs-theme="dark">
     <div class="container-fluid">
       <div class="d-none d-md-flex align-items-center justify-content-between w-100">
-        <img src="images/logo_global.png " class="ms-3" width="200px">
+        <img src="images/logo_global.png " class="ms-3 pe-none" width="200px">
         <ul class="navbar-nav nav-underline flex-row  ms-4">
           <li class="nav-item">
             <a class="nav-link" href="#empresa">Empresa</a>
@@ -76,31 +76,17 @@
   </nav>
 
   <main class="bg-dark">
-    <img src="images/background.png" alt="Background Image" style="height: 100vh;" class="position-relative object-fit-cover w-100 opacity-25 border-bottom">
-    <form method="post" name="form"
-     style="width: 50%;" class="bg-light p-4 position-absolute top-50 rounded start-50 translate-middle d-flex flex-column align-items-center justify-content-center">
-
-      <div class="mb-3 w-100">
-        <p class="text-center text-dark fw-bold" style="font-size: 1.2rem;">Solicitar disponibilidade:</p>
-      </div>
-      
-      <div class="mb-3" style="width: 80%;">
-        <input type="text" id="nome" class="form-control text-center" placeholder="Nome Completo">
-      </div>
-  
-      <div class="mb-3" style="width: 80%;">
-        <input type="text" id="telefone" class="form-control text-center" placeholder="Telefone (XX) XXXXX-XXXX">
-      </div>
-  
-      <div class="mb-3" style="width: 80%;">
-        <input type="text" id="endereco" class="form-control text-center" placeholder="Endereço Completo">
-      </div>
-  
-      <button type="submit" class="btn btn-dark">Solicitar</button>
-    </form>
+    <img src="images/backkground-lg.png" 
+    class="d-block d-lg-none w-100 opacity-25 border-bottom" 
+    style="height: 100vh; object-fit: cover;">
+    <img src="images/background.png" 
+    class="d-none d-lg-block w-100 opacity-25 border-bottom" 
+    style="height: 100vh; object-fit: cover;">
   </main>
   
-  
+  <disp>
+
+  </disp>
 
   <div id="planos" class="d-flex justify-content-center align-items-center bg-dark p-5">
     <div class="container bg-dark p-4">
@@ -121,7 +107,7 @@
                 <span class="fs-5">/Mês</span>
               </p>
               <p class="card-text text-primary">Até o vencimento</p>
-              <a href="#" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
+              <a href="https://api.whatsapp.com/send?phone=5551991437617" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
                 Mais Detalhes
                 <img src="icons/whatsapp-icon.png" width="20px" class="ms-2">
               </a>
@@ -144,7 +130,7 @@
                 <span class="fs-5">/Mês</span>
               </p>
               <p class="card-text text-primary">Até o vencimento</p>
-              <a href="#" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
+              <a href="https://api.whatsapp.com/send?phone=5551991437617" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
                 Mais Detalhes
                 <img src="icons/whatsapp-icon.png" width="20px" class="ms-2">
               </a>
@@ -167,7 +153,7 @@
                 <span class="fs-5">/Mês</span>
               </p>
               <p class="card-text text-primary">Até o vencimento</p>
-              <a href="#" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
+              <a href="https://api.whatsapp.com/send?phone=5551991437617" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
                 Mais Detalhes
                 <img src="icons/whatsapp-icon.png" width="20px" class="ms-2">
               </a>
@@ -190,7 +176,7 @@
                 <span class="fs-5">/Mês</span>
               </p>
               <p class="card-text text-primary">Até o vencimento</p>
-              <a href="#" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
+              <a href="https://api.whatsapp.com/send?phone=5551991437617" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
                 Mais Detalhes
                 <img src="icons/whatsapp-icon.png" width="20px" class="ms-2">
               </a>
@@ -254,6 +240,17 @@
                 class="text-light link-underline link-underline-opacity-0 d-flex align-items-center justify-content-center">
                 <img src="icons/mail_24dp.png" width="20px" class="me-1">admin@globalnetprovedor.com
               </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5>Links Rápidos</h5>
+          <ul class="list-unstyled">
+            <a href="http://sistema.globalnetprovedor.com/" target="_blank"
+              class="text-light link-underline link-underline-opacity-0 d-flex align-items-center justify-content-center">
+              <img src="icons/print_24dp.png" width="20px" class="me-1">Imprimir 2º Via Boleto
+            </a>
             </li>
           </ul>
         </div>
