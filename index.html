@@ -5,276 +5,179 @@
   <meta charset="UTF-8">
   <link rel="icon" href="icons/logo.png">
   <link href="bootstrap-5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/geral.css">
-  <meta name="description"
-    content="GlobalNet - Provedora de Internet de alta velocidade em Cachoeirinha, RS. Planos acessíveis e suporte técnico eficiente.">
-  <meta name="keywords" content="internet, provedor, GlobalNet, Cachoeirinha, RS, banda larga, fibra óptica">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlobalNet</title>
 </head>
 
-<body class="user-select-none bg-black">
+<body class="user-select-none">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <nav class="navbar bg-dark fixed-top border-body shadow-lg" data-bs-theme="dark">
-    <div class="container-fluid">
-      <div class="d-none d-md-flex align-items-center justify-content-between w-100">
-        <img src="images/logo_global.png " class="ms-3 pe-none" width="200px">
-        <ul class="navbar-nav nav-underline flex-row  ms-4">
-          <li class="nav-item">
-            <a class="nav-link" href="#empresa">Empresa</a>
-          </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link" href="#planos">Planos</a>
-          </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link" target="_blank" href="contrato.pdf">Contrato</a>
-          </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link" href="#footer">Fale Conosco</a>
-          </li>
-        </ul>
-        <div class="d-none d-lg-flex me-3">
-          <a href="https://www.instagram.com/globalnetcachoeirinha/" target="_blank"><img class="zoom-image"
-              src="icons/Instagram_icon.png" width="30px"></a>
-          <a href="https://www.facebook.com/GlobalnetCachoeirinha" target="_blank"><img class="zoom-image ms-3"
-              src="icons/facebook.png" width="30px"></a>
-          <a href="https://api.whatsapp.com/send?phone=5551991437617" target="_blank"><img class="zoom-image ms-3"
-              src="icons/whatsapp-icon.png" width="30px"></a>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid d-flex justify-content-end">
-      <button class="btn d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
-        <img src="icons/menu_24dp.png" width="30px">
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-        <div class="offcanvas-header border-bottom d-flex justify-content-between">
-          <img src="images/logo_global.png" width="200px">
-          <button class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
-            <img src="icons/close_24dp.png" width="30px">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link text-secondary-emphasis fs-2" data-bs-dismiss="offcanvas" href="#empresa">Empresa</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary-emphasis fs-2" data-bs-dismiss="offcanvas" href="#planos">Planos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary-emphasis fs-2" target="_blank" href="contrato.pdf">Contrato</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary-emphasis fs-2" data-bs-dismiss="offcanvas" href="#footer">Fale
-                Conosco</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
 
-  <main class="bg-dark">
-    <img src="images/backkground-lg.png" 
-    class="d-block d-lg-none w-100 opacity-25 border-bottom" 
-    style="height: 100vh; object-fit: cover;">
-    <img src="images/background.png" 
-    class="d-none d-lg-block w-100 opacity-25 border-bottom" 
-    style="height: 100vh; object-fit: cover;">
+  <header>
+    <nav class="navbar bg-white fixed-top shadow-lg">
+      <div class="container-fluid">
+        <div class="d-none d-md-flex justify-content-between align-items-center w-100">
+          <div class="d-flex">
+            <img src="images/logo_global.png " class="ms-3 pe-none" width="200px">
+            <ul class="navbar-nav nav-underline flex-row ms-4">
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-bold" href="#">Nosso App</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-dark fw-bold" href="#">Sobre nós</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-dark fw-bold" href="#">Planos</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-dark fw-bold" target="_blank" href="contrato.pdf">Contrato</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-dark fw-bold" href="#">Atendimento</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-none d-lg-flex me-3">
+            <a href="https://www.instagram.com/globalnetcachoeirinha/" target="_blank"><img class="zoom-image"
+                src="icons/Instagram_icon.png" width="30px"></a>
+            <a href="https://www.facebook.com/GlobalnetCachoeirinha" target="_blank"><img class="zoom-image ms-3"
+                src="icons/facebook.png" width="30px"></a>
+            <a href="https://api.whatsapp.com/send?phone=5551991437617" target="_blank"><img class="zoom-image ms-3"
+                src="icons/whatsapp-icon.png" width="30px"></a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="btn d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+          <img src="icons/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" width="30px">
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+          <div class="offcanvas-header bg-primary d-flex justify-content-between">
+            <img src="images/logo_global.png" width="200px">
+            <button class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+              <img src="icons/close_24dp.png" width="30px">
+            </button>
+          </div>
+          <div class="offcanvas-body bg-primary">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link text-white fs-2" data-bs-dismiss="offcanvas" href="#">Nosso App</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-2" href="#">Sobre nós</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-2" data-bs-dismiss="offcanvas" href="#">Planos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-2" target="_blank" href="contrato.pdf">Contrato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-2" data-bs-dismiss="offcanvas" href="#">Atendimento</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container-fluid bg-primary">
+
+    </section>
+    <div class="pb-4 w-100">
+      <h2>App Global</h2>
+      <div class="d-flex p-3">
+        <div class="border bg-white rounded me-4 p-2" style="width: 40%;">
+          <div class="d-flex">
+            <h3>Google Play</h3><img src="icons/android_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" class="ms-2"
+              width="30px" height="30px">
+          </div>
+          <p>Faça download <br> no botão abaixo</p>
+          <a href="https://play.google.com/store/apps/details?id=br.codize.appprovedor"><button
+              class="btn btn-warning text-white fw-bold align-items-center justify-content-center">Clique Aqui <img
+                src="icons/download_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" width="20px"></button></a>
+        </div>
+        <div class="border bg-white rounded p-2" style="width: 40%;">
+          <div class="d-flex">
+            <h3>App Store</h3><img src="icons/ios_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" class="ms-2" width="30px"
+              height="30px">
+          </div>
+          <p>Faça download <br> no botão abaixo</p>
+          <a href="https://apps.apple.com/br/app/app-provedor/id1564606498"><button
+              class="btn btn-warning text-white fw-bold align-items-center justify-content-center">Clique Aqui <img
+                src="icons/download_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" width="20px"></button></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="empresa" class="d-flex justify-content-center align-items-center bg-white text-dark p-4 w-100 h-100">
+      <div class="container">
+        <h2 class="text-center mb-4">
+          <span class="text-dark">Sobre a</span>
+          <span class="text-primary fw-bold">Global<span class="text-warning fw-bold">Net</span></span>
+
+        </h2>
+        <p class="lead">
+          A GlobalNet é uma empresa de tecnologia com sede em Cachoeirinha, Rio Grande do Sul, que oferece soluções
+          modernas de conectividade desde 2010. Inicialmente atuando no setor de tecnologia, migramos para o ramo de
+          telecomunicações em 2018, consolidando-nos como um dos principais provedores de internet da região.
+        </p>
+        <p class="lead">
+          Nossa missão é conectar pessoas e negócios, oferecendo serviços de alta qualidade com atendimento
+          personalizado.
+          Com uma infraestrutura robusta e tecnologia de ponta, a GlobalNet proporciona planos de internet
+          ultrarrápidos,
+          estáveis e acessíveis, garantindo a melhor experiência para residências, empresas e instituições de todos os
+          portes.
+        </p>
+        <p class="lead">
+          Mais do que entregar conexão, acreditamos em fortalecer comunidades, fomentar o crescimento local e
+          simplificar
+          o acesso ao mundo digital. Contamos com uma equipe qualificada, suporte técnico eficiente e um compromisso
+          constante com a inovação e a satisfação dos nossos clientes.
+        </p>
+        <div class="text-center mt-4">
+          <img src="images/anatel.png" class="img-fluid pe-none" style="max-width: 200px;">
+        </div>
+      </div>
+    </div>
   </main>
-  
-  <disp>
 
-  </disp>
+  <footer id="footer" class="bg-primary text-white">
 
-  <div id="planos" class="d-flex justify-content-center align-items-center bg-dark p-5">
-    <div class="container bg-dark p-4">
-      <div class="row justify-content-center g-4">
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="border rounded shadow-lg border-warning p-1">
-            <div class="overflow-hidden rounded">
-              <img src="images/100mbps.png" class="card-img-top zoom-image">
-            </div>
-            <div class="card-body bg-dark d-flex flex-column align-items-center">
-              <h5 class="card-title mt-2">
-                <span class="text-primary">Plano</span>
-                <span class="text-warning fw-bold fs-5">Start</span>
-              </h5>
-              <p class="card-text text-primary mb-0">
-                <span class="fs-4 fw-bold">R$</span>
-                <span class="fs-2 fw-bold text-warning">89,90</span>
-                <span class="fs-5">/Mês</span>
-              </p>
-              <p class="card-text text-primary">Até o vencimento</p>
-              <a href="https://api.whatsapp.com/send?phone=5551991437617" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
-                Mais Detalhes
-                <img src="icons/whatsapp-icon.png" width="20px" class="ms-2">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="border rounded shadow-lg border-warning p-1">
-            <div class="overflow-hidden rounded">
-              <img src="images/400mbps.png" class="card-img-top zoom-image">
-            </div>
-            <div class="card-body bg-dark d-flex flex-column align-items-center">
-              <h5 class="card-title mt-2">
-                <span class="text-primary">Plano</span>
-                <span class="text-warning fw-bold fs-5">Pro</span>
-              </h5>
-              <p class="card-text text-primary mb-0">
-                <span class="fs-4 fw-bold">R$</span>
-                <span class="fs-2 fw-bold text-warning">99,90</span>
-                <span class="fs-5">/Mês</span>
-              </p>
-              <p class="card-text text-primary">Até o vencimento</p>
-              <a href="https://api.whatsapp.com/send?phone=5551991437617" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
-                Mais Detalhes
-                <img src="icons/whatsapp-icon.png" width="20px" class="ms-2">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="border rounded shadow-lg border-warning p-1">
-            <div class="overflow-hidden rounded">
-              <img src="images/600mbps.png" class="card-img-top zoom-image">
-            </div>
-            <div class="card-body bg-dark d-flex flex-column align-items-center">
-              <h5 class="card-title mt-2">
-                <span class="text-primary">Plano</span>
-                <span class="text-warning fw-bold fs-5">Plus</span>
-              </h5>
-              <p class="card-text text-primary mb-0">
-                <span class="fs-4 fw-bold">R$</span>
-                <span class="fs-2 fw-bold text-warning">129,90</span>
-                <span class="fs-5">/Mês</span>
-              </p>
-              <p class="card-text text-primary">Até o vencimento</p>
-              <a href="https://api.whatsapp.com/send?phone=5551991437617" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
-                Mais Detalhes
-                <img src="icons/whatsapp-icon.png" width="20px" class="ms-2">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="border rounded shadow-lg border-warning p-1">
-            <div class="overflow-hidden rounded">
-              <img src="images/900mbps.png" class="card-img-top zoom-image">
-            </div>
-            <div class="card-body bg-dark d-flex flex-column align-items-center">
-              <h5 class="card-title mt-2">
-                <span class="text-primary">Plano</span>
-                <span class="text-warning fw-bold fs-5">Ultra</span>
-              </h5>
-              <p class="card-text text-primary mb-0">
-                <span class="fs-4 fw-bold">R$</span>
-                <span class="fs-2 fw-bold text-warning">179,90</span>
-                <span class="fs-5">/Mês</span>
-              </p>
-              <p class="card-text text-primary">Até o vencimento</p>
-              <a href="https://api.whatsapp.com/send?phone=5551991437617" class="btn btn-outline-primary fw-bold d-flex align-items-center mb-4">
-                Mais Detalhes
-                <img src="icons/whatsapp-icon.png" width="20px" class="ms-2">
-              </a>
-            </div>
-          </div>
-        </div>
+    <div class="p-4 d-flex flex-column text-lg-start text-center">
+      <h2 class="fw-bold">GlobalNet Fibra</h2>
+      <p class="fs-5">Descubra as vantagens de contratar a GlobalNet</p>
+    </div>
+
+    <div class="d-flex flex-column flex-lg-row justify-content-between p-3 align-items-center text-center w-100">
+      <div style="width: 400px;" class="p-3">
+        <img src="icons/cell_tower_24dp.png" class="" width="80px">
+        <p class="fs-6s">Suporte 𝟮𝟰 𝗵𝗼𝗿𝗮𝘀 no whatsapp para garantir que seus
+          problemas sejam resolvidos a qualquer momento, em qualquer dia da semana.</p>
+      </div>
+      <div style="width: 400px;" class="p-3">
+        <img src="icons/5g_24dp.png" width="80px">
+        <p class="fs-6">Possuimos roteadores com Wi-Fi 5G <br> para sua navegação ser ainda mais veloz, ideal para jogos
+          online e
+          downloads sem interrupções.</p>
+      </div>
+      <div style="width: 400px;" class="p-3">
+        <img src="icons/verified_user_24dp.png" width="80px">
+        <p class="fs-6s">Velocidade consistente, conexão estável, desempenho e segurança. Ideal para clientes que
+          buscam eficiência, confiança e tecnologia de ponta.</p>
       </div>
     </div>
-  </div>
 
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.3894360176955!2d-51.08854762513213!3d-29.939475026415415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951973e5853cfe1f%3A0xe333d5923a6bcc45!2sAv.%20Gen.%20Flores%20da%20Cunha%2C%203206%20-%202%C2%BA%20Andar%2C%20Sala%201%20-%20Vila%20Parque%20Brasilia%2C%20Cachoeirinha%20-%20RS%2C%2094950-000!5e0!3m2!1spt-BR!2sbr!4v1737134882859!5m2!1spt-BR!2sbr"
-    class="w-100 shadow-lg d-block" style="height: 100vh;" allowfullscreen="" loading="lazy">
-  </iframe>
+    <hr class="my-4">
 
-  <div id="empresa" class="bg-dark text-white p-5 mt-0">
-    <div class="container">
-      <h2 class="text-center mb-4">
-        <span>Sobre a</span>
-        <span class="text-primary fw-bold">Global<span class="text-warning fw-bold">Net</span></span>
-
-      </h2>
-      <p class="lead">
-        A GlobalNet é uma empresa de tecnologia com sede em Cachoeirinha, Rio Grande do Sul, que oferece soluções
-        modernas de conectividade desde 2010. Inicialmente atuando no setor de tecnologia, migramos para o ramo de
-        telecomunicações em 2018, consolidando-nos como um dos principais provedores de internet da região.
-      </p>
-      <p class="lead">
-        Nossa missão é conectar pessoas e negócios, oferecendo serviços de alta qualidade com atendimento personalizado.
-        Com uma infraestrutura robusta e tecnologia de ponta, a GlobalNet proporciona planos de internet ultrarrápidos,
-        estáveis e acessíveis, garantindo a melhor experiência para residências, empresas e instituições de todos os
-        portes.
-      </p>
-      <p class="lead">
-        Mais do que entregar conexão, acreditamos em fortalecer comunidades, fomentar o crescimento local e simplificar
-        o acesso ao mundo digital. Contamos com uma equipe qualificada, suporte técnico eficiente e um compromisso
-        constante com a inovação e a satisfação dos nossos clientes.
-      </p>
-      <div class="text-center mt-4">
-        <img src="images/anatel.png" class="img-fluid" style="max-width: 200px;">
-      </div>
+    <div class="text-center fw-bold d-flex justify-content-center align-items-center">
+      <p>© 2024 | CLAIR FERREIRA SEG CNPJ: 09649158000161 - Todos os direitos reservados</p>
     </div>
-  </div>
-
-
-  <footer id="footer" class="bg-dark text-center text-light pb-2 py-3 justify-content-between">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-4">
-          <h5>Contato</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="tel:+555130413330"
-                class="text-light link-underline link-underline-opacity-0 d-flex align-items-center justify-content-center">
-                <img src="icons/call_24dp.png" width="20px" class="me-1">(51) 3041-3330
-              </a>
-            </li>
-            <li>
-              <a href="mailto:admin@globalnetprovedor.com"
-                class="text-light link-underline link-underline-opacity-0 d-flex align-items-center justify-content-center">
-                <img src="icons/mail_24dp.png" width="20px" class="me-1">admin@globalnetprovedor.com
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-md-4">
-          <h5>Links Rápidos</h5>
-          <ul class="list-unstyled">
-            <a href="http://sistema.globalnetprovedor.com/" target="_blank"
-              class="text-light link-underline link-underline-opacity-0 d-flex align-items-center justify-content-center">
-              <img src="icons/print_24dp.png" width="20px" class="me-1">Imprimir 2º Via Boleto
-            </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-md-4">
-          <h5>Suporte</h5>
-          <ul class="list-unstyled">
-            <a href="https://api.whatsapp.com/send?phone=5551991437617" target="_blank"
-              class="text-light link-underline link-underline-opacity-0 d-flex align-items-center justify-content-center">
-              <img src="icons/signal_wifi_statusbar_not_connected_24dp.png" width="20px" class="me-1">Técnico
-            </a>
-            </li>
-            <li>
-              <a href="https://api.whatsapp.com/send?phone=5551985761735" target="_blank"
-                class="text-light link-underline link-underline-opacity-0 d-flex align-items-center justify-content-center">
-                <img src="icons/request_quote_24dp.png" width="20px" class="me-1">Financeiro
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="text-center py-3">
-          <p>© 2024 | CLAIR FERREIRA SEG CNPJ: 09649158000161 - Todos os direitos reservados</p>
-        </div>
   </footer>
 
   <a href="https://api.whatsapp.com/send?phone=5551991437617">
@@ -303,15 +206,5 @@
       }
     });
   });
-
-  document.getElementById('form').onsubmit = function(e) {
-            e.preventDefault();
-            const nome = document.getElementById('nome').value;
-            const numero = document.getElementById('telefone').value;
-            const endereco = document.getElementById('endereco').value;
-
-            google.script.run.adicionarDados(nome, numero, endereco);
-            document.getElementById('form').reset();
-        }
 
 </script>

@@ -6,19 +6,6 @@
     transform: scale(1.2);
   }
 
-  ::-webkit-scrollbar {
-    width: 15px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #343a40;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #6c757d;
-    border-radius: 10px;
-  }
-
   .offcanvas {
     transition: transform 0.3s ease-in-out;
   }
