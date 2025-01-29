@@ -10,10 +10,11 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  @media (max-width: 767px) {
-    .col-12.col-md-3 {
-      width: 100% !important;
-    }
+  * {
+    box-sizing: border-box;
+    border: none;
+    padding: 0px;
+    margin: 0px;
   }
 
   @keyframes bounce {

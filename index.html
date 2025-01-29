@@ -3,130 +3,269 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="icons/logo.png">
+  <link rel="icon" href="images/logo.png">
   <link href="bootstrap-5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/geral.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlobalNet</title>
 </head>
 
-<body class="user-select-none">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<body class="user-select-none vw-100" style="overflow-x: hidden;">
   <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/alert.js"></script>
 
   <header>
-    <nav class="navbar bg-white fixed-top shadow-lg">
+    <nav class="navbar bg-white fixed-top shadow">
       <div class="container-fluid">
-        <div class="d-none d-md-flex justify-content-between align-items-center w-100">
+        <div class="d-flex justify-content-between align-items-center vw-100">
           <div class="d-flex">
             <img src="images/logo_global.png " class="ms-3 pe-none" width="200px">
             <ul class="navbar-nav nav-underline flex-row ms-4">
               <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#">Nosso App</a>
+                <a class="nav-link text-dark" href="#app">Nosso App</a>
               </li>
               <li class="nav-item ms-3">
-                <a class="nav-link text-dark fw-bold" href="#">Sobre nós</a>
+                <a class="nav-link text-dark" href="#empresa">Sobre nós</a>
               </li>
               <li class="nav-item ms-3">
-                <a class="nav-link text-dark fw-bold" href="#">Planos</a>
+                <a class="nav-link text-dark" href="#planos">Planos</a>
               </li>
               <li class="nav-item ms-3">
-                <a class="nav-link text-dark fw-bold" target="_blank" href="contrato.pdf">Contrato</a>
+                <a class="nav-link text-dark" target="_blank" href="contrato.pdf">Contrato</a>
               </li>
               <li class="nav-item ms-3">
-                <a class="nav-link text-dark fw-bold" href="#">Atendimento</a>
+                <a class="nav-link text-dark" href="#atendimento">Atendimento</a>
               </li>
             </ul>
           </div>
-          <div class="d-none d-lg-flex me-3">
+          <div class="d-flex me-3">
             <a href="https://www.instagram.com/globalnetcachoeirinha/" target="_blank"><img class="zoom-image"
-                src="icons/Instagram_icon.png" width="30px"></a>
+                src="images/Instagram_icon.png" width="30px"></a>
             <a href="https://www.facebook.com/GlobalnetCachoeirinha" target="_blank"><img class="zoom-image ms-3"
-                src="icons/facebook.png" width="30px"></a>
+                src="images/facebook.png" width="30px"></a>
             <a href="https://api.whatsapp.com/send?phone=5551991437617" target="_blank"><img class="zoom-image ms-3"
-                src="icons/whatsapp-icon.png" width="30px"></a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <button class="btn d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
-          <img src="icons/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" width="30px">
-        </button>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-          <div class="offcanvas-header bg-primary d-flex justify-content-between">
-            <img src="images/logo_global.png" width="200px">
-            <button class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
-              <img src="icons/close_24dp.png" width="30px">
-            </button>
-          </div>
-          <div class="offcanvas-body bg-primary">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link text-white fs-2" data-bs-dismiss="offcanvas" href="#">Nosso App</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fs-2" href="#">Sobre nós</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fs-2" data-bs-dismiss="offcanvas" href="#">Planos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fs-2" target="_blank" href="contrato.pdf">Contrato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fs-2" data-bs-dismiss="offcanvas" href="#">Atendimento</a>
-              </li>
-            </ul>
+                src="images/whatsapp-icon.png" width="30px"></a>
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="container-fluid bg-primary">
+  <section class="container-fluid bg-primary d-flex justify-content-center">
+    <img src="images/background.png" class="vh-100 vw-100 pe-none">
+    <a href="#planos">
+      <button class="btn btn-warning shadow-sm rounded-4 text-white fs-4 fw-bold position-absolute translate-middle"
+        style="top: 65%; left: 20%;">Planos dispiníveis</button>
+    </a>
+  </section>
 
-    </section>
-    <div class="pb-4 w-100">
-      <h2>App Global</h2>
-      <div class="d-flex p-3">
-        <div class="border bg-white rounded me-4 p-2" style="width: 40%;">
-          <div class="d-flex">
-            <h3>Google Play</h3><img src="icons/android_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" class="ms-2"
-              width="30px" height="30px">
+  <article id="atendimento">
+    <div class="p-4">
+      <h1 class="py-4" data-aos="fade-up" data-aos-duration="400">Atendimento</h1>
+
+      <div data-aos="zoom-in-up" class="btn btn-light shadow-sm rounded-4 border me-2" style="width: 130px;">
+        <a href="http://sistema.globalnetprovedor.com/" class="text-dark link-underline link-underline-opacity-0">
+          <img src="images/print_24dp.png" width="80px">
+          <h5>2ª Via Boleto</h5>
+        </a>
+      </div>
+
+      <div data-aos="zoom-in-up" id="testconn" class="btn shadow-sm btn-light rounded-4 border me-2" style="width: 130px;">
+          <img src="images/network_check_24dp.png" width="80px">
+          <h5>Teste de Conexão</h5>
+      </div>
+
+      <div data-aos="zoom-in-up" class="btn btn-light shadow-sm rounded-4 border me-2" style="width: 130px;">
+        <a href="https://api.whatsapp.com/send?phone=5551991437617"
+          class="text-dark link-underline link-underline-opacity-0">
+          <img src="images/support_agent_24dp.png" width="80px">
+          <h5>Suporte Técnico</h5>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <aside id="planos">
+    <div class="p-4">
+      <h1 class="py-4" data-aos="fade-up">Planos GlobalNet</h1>
+
+      <div class="d-flex justify-content-evenly">
+
+        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm" style="width: 300px; ">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="text-primary fw-bold">
+              <span>100</span>
+              <span class="fs-3">MEGAS</span>
+            </h2>
+            <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
           </div>
-          <p>Faça download <br> no botão abaixo</p>
-          <a href="https://play.google.com/store/apps/details?id=br.codize.appprovedor"><button
-              class="btn btn-warning text-white fw-bold align-items-center justify-content-center">Clique Aqui <img
-                src="icons/download_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" width="20px"></button></a>
-        </div>
-        <div class="border bg-white rounded p-2" style="width: 40%;">
-          <div class="d-flex">
-            <h3>App Store</h3><img src="icons/ios_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" class="ms-2" width="30px"
-              height="30px">
+          <div class="text-start">
+            <h4>
+              <span class="fs-6">Oferta por</span>
+              <br>
+              <span class="fs-5">R$</span>
+              <span id="valor100" class="fs-1">89,90</span>
+              <br>
+              <span class="fs-6">Até o vencimento</span>
+            </h4>
           </div>
-          <p>Faça download <br> no botão abaixo</p>
-          <a href="https://apps.apple.com/br/app/app-provedor/id1564606498"><button
-              class="btn btn-warning text-white fw-bold align-items-center justify-content-center">Clique Aqui <img
-                src="icons/download_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" width="20px"></button></a>
+          <h5 class="text-start">Turbine seu plano</h5>
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+            <div class="form-check form-switch d-flex align-items-center">
+              <input class="form-check-input" type="checkbox" role="switch" id="tel100" data-valor="14.90">
+              <label class="form-check-label ms-2" for="tel100">Telefone Fixo + R$14,90</label>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+            <div class="form-check form-switch d-flex align-items-center">
+              <input class="form-check-input" type="checkbox" role="switch" id="str100" data-valor="9.90">
+              <label class="form-check-label ms-2" for="str100">Streaming + R$9,90</label>
+            </div>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
+              class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
         </div>
+
+        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm" style="width: 300px; ">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="text-primary fw-bold">
+              <span>400</span>
+              <span class="fs-3">MEGAS</span>
+            </h2>
+            <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+          </div>
+          <div class="text-start">
+            <h4>
+              <span class="fs-6">Oferta por</span>
+              <br>
+              <span class="fs-5">R$</span>
+              <span id="valor400" class="fs-1">99,90</span>
+              <br>
+              <span class="fs-6">Até o vencimento</span>
+            </h4>
+          </div>
+          <h5 class="text-start">Turbine seu plano</h5>
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+            <div class="form-check form-switch d-flex align-items-center">
+              <input class="form-check-input" type="checkbox" role="switch" id="tel400" data-valor="14.90">
+              <label class="form-check-label ms-2" for="tel400">Telefone Fixo + R$14,90</label>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+            <div class="form-check form-switch d-flex align-items-center">
+              <input class="form-check-input" type="checkbox" role="switch" id="str400" data-valor="9.90">
+              <label class="form-check-label ms-2" for="str400">Streaming + R$9,90</label>
+            </div>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
+              class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+        </div>
+
+        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm" style="width: 300px; ">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="text-primary fw-bold">
+              <span>600</span>
+              <span class="fs-3">MEGAS</span>
+            </h2>
+            <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+          </div>
+          <div class="text-start">
+            <h4>
+              <span class="fs-6">Oferta por</span>
+              <br>
+              <span class="fs-5">R$</span>
+              <span id="valor600" class="fs-1">129,90</span>
+              <br>
+              <span class="fs-6">Até o vencimento</span>
+            </h4>
+          </div>
+          <h5 class="text-start">Turbine seu plano</h5>
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+            <div class="form-check form-switch d-flex align-items-center">
+              <input class="form-check-input" checked disabled type="checkbox" role="switch" id="str600"
+                data-valor="9.90">
+              <label class="form-check-label ms-2" for="str">Streaming</label>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+            <div class="form-check form-switch d-flex align-items-center">
+              <input class="form-check-input" type="checkbox" role="switch" id="tel600" data-valor="14.90">
+              <label class="form-check-label ms-2" for="tel600">Telefone Fixo + R$14,90</label>
+            </div>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
+              class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+        </div>
+
+        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm" style="width: 300px;  ">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="text-primary fw-bold">
+              <span>999</span>
+              <span class="fs-3">MEGAS</span>
+            </h2>
+            <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+          </div>
+          <div class="text-start">
+            <h4>
+              <span class="fs-6">Oferta por</span>
+              <br>
+              <span class="fs-5">R$</span>
+              <span id="valor600" class="fs-1">179,90</span>
+              <br>
+              <span class="fs-6">Até o vencimento</span>
+            </h4>
+          </div>
+          <h5 class="text-start">Turbine seu plano</h5>
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+            <div class="form-check form-switch d-flex align-items-center">
+              <input class="form-check-input" checked disabled type="checkbox" role="switch" id="str600"
+                data-valor="9.90">
+              <label class="form-check-label ms-2" for="str">Streaming</label>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+            <div class="form-check form-switch d-flex align-items-center">
+              <input class="form-check-input" checked disabled type="checkbox" role="switch" data-valor="14.90">
+              <label class="form-check-label ms-2">Telefone Fixo + R$14,90</label>
+            </div>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
+              class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+        </div>
+
       </div>
     </div>
 
-    <div id="empresa" class="d-flex justify-content-center align-items-center bg-white text-dark p-4 w-100 h-100">
+  </aside>
+
+  <hr id="empresa">
+
+  <main>
+    <div class="d-flex justify-content-center align-items-center bg-white text-dark pt-2 p-4 vw-100 h-100">
       <div class="container">
-        <h2 class="text-center mb-4">
+        <h2 data-aos="fade-down" class="text-center mb-4">
           <span class="text-dark">Sobre a</span>
           <span class="text-primary fw-bold">Global<span class="text-warning fw-bold">Net</span></span>
 
         </h2>
-        <p class="lead">
+        <p class="lead" data-aos="fade-down">
           A GlobalNet é uma empresa de tecnologia com sede em Cachoeirinha, Rio Grande do Sul, que oferece soluções
           modernas de conectividade desde 2010. Inicialmente atuando no setor de tecnologia, migramos para o ramo de
           telecomunicações em 2018, consolidando-nos como um dos principais provedores de internet da região.
         </p>
-        <p class="lead">
+        <p class="lead" data-aos="fade-down">
           Nossa missão é conectar pessoas e negócios, oferecendo serviços de alta qualidade com atendimento
           personalizado.
           Com uma infraestrutura robusta e tecnologia de ponta, a GlobalNet proporciona planos de internet
@@ -134,41 +273,74 @@
           estáveis e acessíveis, garantindo a melhor experiência para residências, empresas e instituições de todos os
           portes.
         </p>
-        <p class="lead">
+        <p class="lead" data-aos="fade-down">
           Mais do que entregar conexão, acreditamos em fortalecer comunidades, fomentar o crescimento local e
           simplificar
           o acesso ao mundo digital. Contamos com uma equipe qualificada, suporte técnico eficiente e um compromisso
           constante com a inovação e a satisfação dos nossos clientes.
         </p>
-        <div class="text-center mt-4">
-          <img src="images/anatel.png" class="img-fluid pe-none" style="max-width: 200px;">
+        <div class="text-center mt-4" data-aos="fade-down">
+          <img src="images/anatel.png" id="app" class="img-fluid pe-none" style="max-width: 200px;">
         </div>
       </div>
     </div>
   </main>
 
-  <footer id="footer" class="bg-primary text-white">
+  <hr>
 
-    <div class="p-4 d-flex flex-column text-lg-start text-center">
+  <div class="text-center vw-100">
+    <h1 class="mt-4" data-aos="fade-up">Baixe o app da GlobalNet</h1>
+    <h5 data-aos="fade-up">A GlobalNet quer te manter sempre conectado e estar cada vez mais próximo de você! </h5>
+    <div class="d-flex justify-content-center p-3 my-5">
+      <div  data-aos="flip-down" data-aos-duration="800" class="border p-3 bg-white text-dark text-center rounded me-4 p-2" style="width: 30%">
+        <a href="https://play.google.com/store/apps/details?id=br.codize.appprovedor"
+          class="text-dark link-underline link-underline-opacity-0">
+          <div class="d-flex align-items-center justify-content-center">
+            <h3>Google Play</h3> <img src="images/Google_Play_2022_icon.svg.png" class="ms-3" width="40px"
+              height="40px">
+          </div>
+          <p>Faça download <br> no botão abaixo</p>
+          <button class="btn btn-warning rounded-5 text-white fw-bold align-items-center justify-content-center">Clique
+            Aqui
+            <img src="images/download_24dp.png" width="20px" height="20px"></button>
+        </a>
+      </div>
+      <div  data-aos="flip-down" data-aos-duration="800"  class="border text-center p-3 bg-white text-dark rounded p-2" style="width: 30%">
+        <a href="https://apps.apple.com/br/app/app-provedor/id1564606498"
+          class="text-dark link-underline link-underline-opacity-0">
+          <div class="d-flex align-items-center justify-content-center">
+            <h3>App Store</h3> <img src="images/App_Store_(iOS).svg.png" class="ms-3" width="40px" height="40px">
+          </div>
+          <p>Faça download <br> no botão abaixo</p>
+          <button class="btn btn-warning rounded-5 text-white fw-bold align-items-center justify-content-center">Clique
+            Aqui
+            <img src="images/download_24dp.png" width="20px" height="20px"></button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" class="bg-primary text-white vw-100">
+    <div data-aos="zoom-in-up" data-aos-duration="400" class="pt-4 d-flex flex-column text-center">
       <h2 class="fw-bold">GlobalNet Fibra</h2>
       <p class="fs-5">Descubra as vantagens de contratar a GlobalNet</p>
     </div>
 
-    <div class="d-flex flex-column flex-lg-row justify-content-between p-3 align-items-center text-center w-100">
-      <div style="width: 400px;" class="p-3">
-        <img src="icons/cell_tower_24dp.png" class="" width="80px">
+    <div class="d-flex justify-content-evenly p-3 align-items-center text-center w-100">
+      <div data-aos="flip-right" data-aos-duration="700" style="width: 30%;" class="p-3 border rounded-4">
+        <img src="images/cell_tower_24dp.png" width="80px">
         <p class="fs-6s">Suporte 𝟮𝟰 𝗵𝗼𝗿𝗮𝘀 no whatsapp para garantir que seus
           problemas sejam resolvidos a qualquer momento, em qualquer dia da semana.</p>
       </div>
-      <div style="width: 400px;" class="p-3">
-        <img src="icons/5g_24dp.png" width="80px">
+      <div data-aos="flip-right" data-aos-duration="700" style="width: 30%;" class="p-3 border rounded-4">
+        <img src="images/5g_24dp.png" width="80px">
         <p class="fs-6">Possuimos roteadores com Wi-Fi 5G <br> para sua navegação ser ainda mais veloz, ideal para jogos
           online e
           downloads sem interrupções.</p>
       </div>
-      <div style="width: 400px;" class="p-3">
-        <img src="icons/verified_user_24dp.png" width="80px">
-        <p class="fs-6s">Velocidade consistente, conexão estável, desempenho e segurança. Ideal para clientes que
+      <div data-aos="flip-right" data-aos-duration="700" style="width: 30%;" class="p-3 border rounded-4">
+        <img src="images/verified_user_24dp.png" width="80px">
+        <p class="fs-6">Velocidade, conexão estável, desempenho e segurança. Ideal para clientes que
           buscam eficiência, confiança e tecnologia de ponta.</p>
       </div>
     </div>
@@ -176,35 +348,26 @@
     <hr class="my-4">
 
     <div class="text-center fw-bold d-flex justify-content-center align-items-center">
-      <p>© 2024 | CLAIR FERREIRA SEG CNPJ: 09649158000161 - Todos os direitos reservados</p>
+      <p>© 2024 | GLOBALNET CNPJ: 09649158000161 - Todos os direitos reservados</p>
     </div>
   </footer>
 
   <a href="https://api.whatsapp.com/send?phone=5551991437617">
-    <img src="icons/whatsapp-icon.png" alt="WhatsApp Icon" class="img-fluid position-fixed"
+    <img src="images/whatsapp-icon.png" alt="WhatsApp Icon" class="img-fluid position-fixed"
       style="width: 50px; height: 50px; bottom: 30px; right: 30px; animation: bounce 2s infinite;">
   </a>
 
 </body>
-
 </html>
 <script>
-  document.querySelectorAll('#offcanvas .nav-link').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const offcanvas = document.getElementById('offcanvas');
-      const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
-      if (offcanvasInstance) {
-        offcanvasInstance.hide();
-      }
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
 
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
+  function verificarLargura() {
+    if (window.innerWidth <= 1000 && !window.location.href.includes('index_phone.html')) {
+      window.location.href = 'index_phone.html';
+    }
+  }
+
+  verificarLargura();
+  window.addEventListener('resize', verificarLargura);
 
 </script>
