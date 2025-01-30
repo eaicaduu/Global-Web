@@ -11,7 +11,7 @@
     <title>GlobalNet</title>
 </head>
 
-<body class="user-select-none vw-100" >
+<body class="user-select-none vw-100">
     <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -84,13 +84,39 @@
         </div>
     </header>
 
-    <section class="container-fluid bg-primary d-flex justify-content-center">
-        <img src="images/background_phone.png" class="vw-100 pe-none">
+    <section class="container-fluid bg-primary d-flex justify-content-center m-0 p-0">
+        <img src="images/background_phone.png" class="pe-none" style="height: 80vh; object-fit: cover; width: 100%;">
     </section>
 
-    <aside id="planos">
+    <div>
+        <h1 class="py-4 text-center" data-aos="fade-up" data-aos-duration="400">Formulário</h1>
+        <form id="form" class="mx-3" method="post">
+            <div data-aos="fade-up" class="mb-2">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" oninput="validarNome()" class="form-control form-control-lg"
+                    placeholder="Insira seu nome completo" id="nome">
+            </div>
+            <div data-aos="fade-up" class="mb-2">
+                <label for="tel" class="form-label">Telefone</label>
+                <input type="text" oninput="validarTelefone()" maxlength="15" class="form-control form-control-lg"
+                    placeholder="(00) 0 0000-0000" id="tel">
+            </div>
+            <div id="planos" data-aos="fade-up" class="mb-2">
+                <label for="end" class="form-label">Endreço Completo</label>
+                <input type="text" oninput="validarEndereco()" class="form-control form-control-lg" id="end"
+                    placeholder="Insira seu endreço completo">
+            </div>
+            <div data-aos="fade-up" class="d-flex justify-content-center">
+                <button type="button" class="btn btn-primary fw-bold px-4 mt-2">Enviar</button>
+            </div>
+        </form>
+    </div>
 
-        <div data-aos="zoom-in-up" data-aos-duration="700" class="d-flex align-items-center py-5" style="overflow-x: auto; width: 100%; white-space: nowrap;">
+    <hr>
+
+    <aside>
+        <div data-aos="zoom-in-up" data-aos-duration="700" class="d-flex align-items-center my-2 py-5"
+            style="overflow-x: auto; width: 100%; white-space: nowrap;">
 
 
             <div class="border rounded p-4 ms-4 shadow-sm">
@@ -251,12 +277,12 @@
 
     <div class="text-center w-100" id="app">
         <div data-aos="fade-up" data-aos-duration="400">
-        <h1 class="mt-4" >Baixe o app da GlobalNet</h1>
-        <h6>A GlobalNet quer te manter sempre conectado e estar cada vez mais próximo de você! </h6>
+            <h1 class="mt-4">Baixe o app da GlobalNet</h1>
+            <h6>A GlobalNet quer te manter sempre conectado e estar cada vez mais próximo de você! </h6>
         </div>
         <div class="d-flex flex-column flex-md-row justify-content-center align-items-center p-3 my-3 w-100">
-            <div data-aos="flip-left" data-aos-duration="700" class="border p-3 bg-white text-dark text-center rounded mb-3 mb-md-0 me-md-3 p-2"
-                style="width: 300px">
+            <div data-aos="flip-left" data-aos-duration="700"
+                class="border p-3 bg-white text-dark text-center rounded mb-3 mb-md-0 me-md-3 p-2" style="width: 300px">
                 <a href="https://play.google.com/store/apps/details?id=br.codize.appprovedor"
                     class="text-dark link-underline link-underline-opacity-0">
                     <div class="d-flex align-items-center justify-content-center">
@@ -270,7 +296,8 @@
                         <img src="images/download_24dp.png" width="20px" height="20px"></button>
                 </a>
             </div>
-            <div data-aos="flip-right" data-aos-duration="700" class="border text-center p-3 bg-white text-dark rounded p-2" style="width: 300px">
+            <div data-aos="flip-right" data-aos-duration="700"
+                class="border text-center p-3 bg-white text-dark rounded p-2" style="width: 300px">
                 <a href="https://apps.apple.com/br/app/app-provedor/id1564606498"
                     class="text-dark link-underline link-underline-opacity-0">
                     <div class="d-flex align-items-center justify-content-center">
@@ -328,7 +355,7 @@
     </main>
 
     <footer class="bg-primary text-white">
-        <div data-aos="zoom-in-down" class="pt-4 d-flex flex-column text-center">
+        <div data-aos="fade-up" class="pt-4 d-flex flex-column text-center">
             <h2 class="fw-bold">GlobalNet Fibra</h2>
             <p class="fs-5">Descubra as vantagens de contratar a GlobalNet</p>
         </div>

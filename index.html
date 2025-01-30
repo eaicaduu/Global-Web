@@ -58,13 +58,15 @@
   <section class="container-fluid bg-primary d-flex justify-content-center">
     <img src="images/background.png" class="vh-100 vw-100 pe-none">
     <a href="#planos">
-      <button class="btn btn-warning shadow-sm rounded-4 text-white fs-4 fw-bold position-absolute translate-middle"
+      <button id="atendimento"
+        class="btn btn-warning shadow-sm rounded-4 text-white fs-4 fw-bold position-absolute translate-middle"
         style="top: 65%; left: 20%;">Planos dispiníveis</button>
-    </a>
+    </a>7
+
   </section>
 
-  <article id="atendimento">
-    <div class="p-4">
+  <article class="d-flex justify-content-between">
+    <div class="p-4 w-50">
       <h1 class="py-4" data-aos="fade-up" data-aos-duration="400">Atendimento</h1>
 
       <div data-aos="zoom-in-up" class="btn btn-light shadow-sm rounded-4 border me-2" style="width: 130px;">
@@ -74,22 +76,50 @@
         </a>
       </div>
 
-      <div data-aos="zoom-in-up" id="testconn" class="btn shadow-sm btn-light rounded-4 border me-2" style="width: 130px;">
-          <img src="images/network_check_24dp.png" width="80px">
-          <h5>Teste de Conexão</h5>
+      <div data-aos="zoom-in-up" id="testconn" class="btn shadow-sm btn-light rounded-4 border me-2"
+        style="width: 130px;">
+        <img src="images/network_check_24dp.png" width="80px">
+        <h5>Teste de Conexão</h5>
       </div>
 
       <div data-aos="zoom-in-up" class="btn btn-light shadow-sm rounded-4 border me-2" style="width: 130px;">
         <a href="https://api.whatsapp.com/send?phone=5551991437617"
           class="text-dark link-underline link-underline-opacity-0">
           <img src="images/support_agent_24dp.png" width="80px">
-          <h5>Suporte Técnico</h5>
+          <h5 id="planos">Suporte Técnico</h5>
         </a>
       </div>
     </div>
+
+    <div class="d-flex flex-column p-4 w-50">
+      <h1 class="pt-4" data-aos="fade-up" data-aos-duration="400">Formulário</h1>
+      <form id="form" class="me-4" method="post">
+        <div data-aos="fade-right" class="mb-1 d-flex justify-content-between">
+          <div class="d-flex flex-column" style="width: 50%;">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" oninput="validarNome()" class="form-control" placeholder="Insira seu nome completo"
+              id="nome">
+          </div>
+          <div class="d-flex flex-column">
+            <label for="tel" class="form-label">Telefone</label>
+            <input type="text" oninput="validarTelefone()" maxlength="15" class="form-control"
+              placeholder="(00) 0 0000-0000" id="tel">
+          </div>
+        </div>
+        <div data-aos="fade-right" class="mb-1">
+          <label for="end" class="form-label">Endreço Completo</label>
+          <input type="text" oninput="validarEndereco()" class="form-control" id="end"
+            placeholder="Insira seu endreço completo">
+        </div>
+        <div data-aos="fade-up" class="d-flex justify-content-center">
+          <button type="button" class="btn btn-primary fw-bold px-4 mt-2">Enviar</button>
+        </div>
+      </form>
+    </div>
+
   </article>
 
-  <aside id="planos">
+  <aside>
     <div class="p-4">
       <h1 class="py-4" data-aos="fade-up">Planos GlobalNet</h1>
 
@@ -225,7 +255,7 @@
               <span class="fs-6">Até o vencimento</span>
             </h4>
           </div>
-          <h5 class="text-start">Turbine seu plano</h5>
+          <h5 id="empresa" class="text-start">Turbine seu plano</h5>
           <div class="d-flex align-items-center mb-2">
             <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
             <div class="form-check form-switch d-flex align-items-center">
@@ -250,8 +280,6 @@
 
   </aside>
 
-  <hr id="empresa">
-
   <main>
     <div class="d-flex justify-content-center align-items-center bg-white text-dark pt-2 p-4 vw-100 h-100">
       <div class="container">
@@ -273,14 +301,14 @@
           estáveis e acessíveis, garantindo a melhor experiência para residências, empresas e instituições de todos os
           portes.
         </p>
-        <p class="lead" data-aos="fade-down">
+        <p id="app" class="lead" data-aos="fade-down">
           Mais do que entregar conexão, acreditamos em fortalecer comunidades, fomentar o crescimento local e
           simplificar
           o acesso ao mundo digital. Contamos com uma equipe qualificada, suporte técnico eficiente e um compromisso
           constante com a inovação e a satisfação dos nossos clientes.
         </p>
         <div class="text-center mt-4" data-aos="fade-down">
-          <img src="images/anatel.png" id="app" class="img-fluid pe-none" style="max-width: 200px;">
+          <img src="images/anatel.png" class="img-fluid pe-none" style="max-width: 200px;">
         </div>
       </div>
     </div>
@@ -292,7 +320,8 @@
     <h1 class="mt-4" data-aos="fade-up">Baixe o app da GlobalNet</h1>
     <h5 data-aos="fade-up">A GlobalNet quer te manter sempre conectado e estar cada vez mais próximo de você! </h5>
     <div class="d-flex justify-content-center p-3 my-5">
-      <div  data-aos="flip-down" data-aos-duration="800" class="border p-3 bg-white text-dark text-center rounded me-4 p-2" style="width: 30%">
+      <div data-aos="flip-down" data-aos-duration="800"
+        class="border p-3 bg-white text-dark text-center rounded me-4 p-2" style="width: 30%">
         <a href="https://play.google.com/store/apps/details?id=br.codize.appprovedor"
           class="text-dark link-underline link-underline-opacity-0">
           <div class="d-flex align-items-center justify-content-center">
@@ -305,7 +334,8 @@
             <img src="images/download_24dp.png" width="20px" height="20px"></button>
         </a>
       </div>
-      <div  data-aos="flip-down" data-aos-duration="800"  class="border text-center p-3 bg-white text-dark rounded p-2" style="width: 30%">
+      <div data-aos="flip-down" data-aos-duration="800" class="border text-center p-3 bg-white text-dark rounded p-2"
+        style="width: 30%">
         <a href="https://apps.apple.com/br/app/app-provedor/id1564606498"
           class="text-dark link-underline link-underline-opacity-0">
           <div class="d-flex align-items-center justify-content-center">
@@ -358,6 +388,7 @@
   </a>
 
 </body>
+
 </html>
 <script>
 

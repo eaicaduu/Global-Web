@@ -1,13 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementById('btn-teste-conexao');
-    if (button) {
-      button.addEventListener('click', instrucoes1);
-    }
-  });
+document.addEventListener('DOMContentLoaded', function () {
+  const button = document.getElementById('testconn');
+  if (button) {
+    button.addEventListener('click', instrucoes1);
+  }
+});
 
 function instrucoes1() {
-    Swal.fire({
-      html: `
+  Swal.fire({
+    html: `
       <h3 style="font-weight: bold;">Passo a Passo para Testar a Velocidade da Sua Internet</h3> <br>
       1º Escolha a melhor conexão.<br>
       Para um teste mais preciso, conecte o computador <br> ou notebook diretamente ao roteador usando <br> um cabo de rede.<br>
@@ -22,17 +22,17 @@ function instrucoes1() {
       </a>
       </div>
       `,
-      showCancelButton: false,
-      showConfirmButton: false,
-      allowOutsideClick: true,
-      allowEscapeKey: true
-    })
+    showCancelButton: false,
+    showConfirmButton: false,
+    allowOutsideClick: true,
+    allowEscapeKey: true
+  })
 
-  }
+}
 
-  function instrucoes2() {
-    Swal.fire({
-      html: `
+function instrucoes2() {
+  Swal.fire({
+    html: `
       <h3 style="font-weight: bold;">Passo a Passo para Testar a Velocidade da Sua Internet</h3> <br>
       2º Feche programas e dispositivos que usam <br>
       internet para evitar resultados imprecisos. <br>
@@ -47,16 +47,16 @@ function instrucoes1() {
       <button class="btn btn-primary text-white">Próximo</button>
       </a>
       </div>`,
-      showCancelButton: false,
-      showConfirmButton: false,
-      allowOutsideClick: true,
-      allowEscapeKey: true
-    })
-  }
+    showCancelButton: false,
+    showConfirmButton: false,
+    allowOutsideClick: true,
+    allowEscapeKey: true
+  })
+}
 
-  function instrucoes3() {
-    Swal.fire({
-      html: `
+function instrucoes3() {
+  Swal.fire({
+    html: `
       <h3 style="font-weight: bold;">Passo a Passo para Testar a Velocidade da Sua Internet</h3> <br>
       3º Inicie o teste e assim que a página carregar <br>
       o teste começará automaticamente.<br>
@@ -71,16 +71,16 @@ function instrucoes1() {
       <button class="btn btn-primary text-white">Próximo</button>
       </a>
       </div>`,
-      showCancelButton: false,
-      showConfirmButton: false,
-      allowOutsideClick: true,
-      allowEscapeKey: true
-    })
-  }
+    showCancelButton: false,
+    showConfirmButton: false,
+    allowOutsideClick: true,
+    allowEscapeKey: true
+  })
+}
 
-  function instrucoes4() {
-    Swal.fire({
-      html: `
+function instrucoes4() {
+  Swal.fire({
+    html: `
       <h3 style="font-weight: bold;">Passo a Passo para Testar a Velocidade da Sua Internet</h3> <br>
       4º Analise os resultados, o site <br> mostrará os seguintes dados:<br>
       <br>
@@ -94,16 +94,16 @@ function instrucoes1() {
       <button class="btn btn-primary text-white">Próximo</button>
       </a>
       </div>`,
-      showCancelButton: false,
-      showConfirmButton: false,
-      allowOutsideClick: true,
-      allowEscapeKey: true
-    })
-  }
+    showCancelButton: false,
+    showConfirmButton: false,
+    allowOutsideClick: true,
+    allowEscapeKey: true
+  })
+}
 
-  function instrucoes5() {
-    Swal.fire({
-      html: `
+function instrucoes5() {
+  Swal.fire({
+    html: `
       <h3 style="font-weight: bold;">Passo a Passo para Testar a Velocidade da Sua Internet</h3> <br>
       5º Compare com o seu plano de internet.<br>
       Verifique a velocidade contratada no seu plano. <br>
@@ -122,58 +122,154 @@ function instrucoes1() {
       <a onclick="Swal.close(); instrucoes5()"
       </a>
       </div>`,
-      showCancelButton: false,
-      showConfirmButton: false,
-      allowOutsideClick: true,
-      allowEscapeKey: true
-    })
-  }
-  
-  function atualizarValor() {
-    const valorBase100 = 89.90;
-    const valorBase400 = 99.90;
-    const valorBase600 = 129.90;
+    showCancelButton: false,
+    showConfirmButton: false,
+    allowOutsideClick: true,
+    allowEscapeKey: true
+  })
+}
 
-    let valorTel = 14.90
-    let valorStr = 9.90
+function atualizarValor() {
+  const valorBase100 = 89.90;
+  const valorBase400 = 99.90;
+  const valorBase600 = 129.90;
 
-    function calcularValorAdicional(planoBase, idSwitch, valorAdicional) {
-      const switchElement = document.getElementById(idSwitch);
-      if (switchElement.checked) {
-        return planoBase + valorAdicional;
-      }
-      return planoBase;
+  let valorTel = 14.90
+  let valorStr = 9.90
+
+  function calcularValorAdicional(planoBase, idSwitch, valorAdicional) {
+    const switchElement = document.getElementById(idSwitch);
+    if (switchElement.checked) {
+      return planoBase + valorAdicional;
     }
-
-    let valorFinal100 = valorBase100;
-    let valorFinal400 = valorBase400;
-    let valorFinal600 = valorBase600;
-
-    if (document.getElementById("tel100").checked) valorFinal100 += valorTel;
-    if (document.getElementById("str100").checked) valorFinal100 += valorStr;
-
-    if (document.getElementById("tel400").checked) valorFinal400 += valorTel;
-    if (document.getElementById("str400").checked) valorFinal400 += valorStr;
-
-    if (document.getElementById("tel600").checked) valorFinal600 += valorTel;
-    if (document.getElementById("str600").checked) valorFinal600 += valorStr;
-
-    document.getElementById("valor100").textContent = valorFinal100.toFixed(2);
-    document.getElementById("valor400").textContent = valorFinal400.toFixed(2);
-    document.getElementById("valor600").textContent = valorFinal600.toFixed(2);
+    return planoBase;
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const switches = document.querySelectorAll(".form-check-input");
-  
-    if (switches.length > 0) {
-      switches.forEach(switchElement => {
-        switchElement.addEventListener('change', atualizarValor);
+  let valorFinal100 = valorBase100;
+  let valorFinal400 = valorBase400;
+  let valorFinal600 = valorBase600;
+
+  if (document.getElementById("tel100").checked) valorFinal100 += valorTel;
+  if (document.getElementById("str100").checked) valorFinal100 += valorStr;
+
+  if (document.getElementById("tel400").checked) valorFinal400 += valorTel;
+  if (document.getElementById("str400").checked) valorFinal400 += valorStr;
+
+  if (document.getElementById("tel600").checked) valorFinal600 += valorTel;
+  if (document.getElementById("str600").checked) valorFinal600 += valorStr;
+
+  document.getElementById("valor100").textContent = valorFinal100.toFixed(2);
+  document.getElementById("valor400").textContent = valorFinal400.toFixed(2);
+  document.getElementById("valor600").textContent = valorFinal600.toFixed(2);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const switches = document.querySelectorAll(".form-check-input");
+
+  if (switches.length > 0) {
+    switches.forEach(switchElement => {
+      switchElement.addEventListener('change', atualizarValor);
+    });
+
+    atualizarValor();
+  }
+});
+
+AOS.init({
+  duration: 500,
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form");
+  const submitButton = form.querySelector("button");
+
+  submitButton.addEventListener("click", function () {
+      const nomeInput = document.getElementById("nome");
+      const telefoneInput = document.getElementById("tel");
+      const enderecoInput = document.getElementById("end");
+      
+      const nome = nomeInput.value.trim();
+      const telefone = telefoneInput.value.trim();
+      const endereco = enderecoInput.value.trim();
+      
+      if (!nome || !telefone || !endereco) {
+          Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Preencha todos os campos!",
+          });
+          return;
+      } 
+
+      const formData = {
+          nome,
+          telefone,
+          endereco
+      };
+
+      fetch("https://api.sheetmonkey.io/form/kJpFBo7DRXfkjQnuptCWit", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error("Erro ao enviar os dados");
+          }
+          return response.text();
+      })
+      .then(() => {
+          Swal.fire({
+              icon: "success",
+              title: "Solicitação recebida!",
+              html: "Recebemos seus dados com sucesso! <br> Nossa equipe entrará em contato em breve."
+          });
+
+          nomeInput.value = "";
+          telefoneInput.value = "";
+          enderecoInput.value = "";
+      })
+      .catch(error => {
+          Swal.fire({
+              icon: "error",
+              title: "Erro!",
+              text: "Ocorreu um erro ao enviar os dados."
+          });
+          console.error("Erro ao enviar:", error);
       });
+  });
+});
+
+function validarNome() {
+  const nomeInput = document.getElementById('nome');
+
+  nomeInput.value = nomeInput.value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, "");
+
+  nomeInput.value = nomeInput.value.replace(/\b\w/g, function(match) {
+    return match.toUpperCase();
+  }).replace(/\B\w/g, function(match) {
+    return match.toLowerCase(); 
+  });
+}
+
+function validarTelefone() {
+  const telInput = document.getElementById('tel');
   
-      atualizarValor();
-    }
+  telInput.value = telInput.value.replace(/[^0-9\(\)\-\s]/g, "");
+
+  telInput.value = telInput.value.replace(/^(\d{2})(\d)/, "($1) $2");
+  telInput.value = telInput.value.replace(/(\d{5})(\d{4})/, "$1-$2");
+}
+
+function validarEndereco() {
+  const endInput = document.getElementById('end');
+  
+  endInput.value = endInput.value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ0-9\s,.-]/g, "");
+  
+  endInput.value = endInput.value.replace(/\b\w/g, function(match) {
+    return match.toUpperCase();
+  }).replace(/\B\w/g, function(match) {
+    return match.toLowerCase();
   });
-  AOS.init({
-    duration: 500,
-  });
+}
