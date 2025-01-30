@@ -97,8 +97,21 @@
                     placeholder="Insira seu nome completo" id="nome">
             </div>
             <div data-aos="fade-up" class="mb-2">
+                <label for="email" class="form-label">E-mail * opicional</label>
+                <input type="text" oninput="validarEmail()" class="form-control form-control-lg" id="email"
+                    placeholder="Insira seu e-mail">
+                    <select id="email-suggestions" class="form-select form-select-lg" onchange="preencherEmail()" style="display: none;">
+                        <option selected value="">Selecionar E-mail</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="outlook.com">outlook.com</option>
+                        <option value="terra.com.br">terra.com.br</option>
+                      </select>
+            </div>
+            <div data-aos="fade-up" class="mb-2">
                 <label for="tel" class="form-label">Telefone</label>
-                <input type="text" oninput="validarTelefone()" maxlength="15" class="form-control form-control-lg"
+                <input type="text" inputmode="numeric" pattern="[0-9]*" oninput="validarTelefone()" maxlength="15" class="form-control form-control-lg"
                     placeholder="(00) 0 0000-0000" id="tel">
             </div>
             <div id="planos" data-aos="fade-up" class="mb-2">

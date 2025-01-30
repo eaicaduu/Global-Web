@@ -1,8 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
   const button = document.getElementById('testconn');
+  const inputs = document.querySelectorAll("input");
   if (button) {
     button.addEventListener('click', instrucoes1);
   }
+
+  inputs.forEach((input, index) => {
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        const nextInput = inputs[index + 1];
+        if (nextInput) {
+          nextInput.focus(); 
+        }
+      }
+    });
+  });
 });
 
 function instrucoes1() {
@@ -186,7 +199,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const nomeInput = document.getElementById("nome");
       const telefoneInput = document.getElementById("tel");
       const enderecoInput = document.getElementById("end");
+      const emailInput = document.getElementById("email");
       
+      const email = emailInput.value.trim();
       const nome = nomeInput.value.trim();
       const telefone = telefoneInput.value.trim();
       const endereco = enderecoInput.value.trim();
@@ -195,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
           Swal.fire({
               icon: "error",
               title: "Oops...",
-              text: "Preencha todos os campos!",
+              text: "Preencha todos os campos obrigatórios!",
           });
           return;
       } 
@@ -203,7 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const formData = {
           nome,
           telefone,
-          endereco
+          endereco,
+          email
       };
 
       fetch("https://api.sheetmonkey.io/form/kJpFBo7DRXfkjQnuptCWit", {
@@ -226,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
               html: "Recebemos seus dados com sucesso! <br> Nossa equipe entrará em contato em breve."
           });
 
+          emailInput.value = "";
           nomeInput.value = "";
           telefoneInput.value = "";
           enderecoInput.value = "";
@@ -272,4 +289,28 @@ function validarEndereco() {
   }).replace(/\B\w/g, function(match) {
     return match.toLowerCase();
   });
+}
+
+function validarEmail() {
+  const emailInput = document.getElementById('email');
+  const select = document.getElementById('email-suggestions');
+  
+  const emailValue = emailInput.value;
+
+  if (emailValue.includes('@') && emailValue.indexOf('@')) {
+    select.style.display = 'block';
+  } else {
+    select.style.display = 'none';
+  }
+
+}
+
+function preencherEmail() {
+const emailInput = document.getElementById('email');
+  const emailSuggestions = document.getElementById('email-suggestions');
+  
+  const selectedDomain = emailSuggestions.value;
+  const emailValue = emailInput.value.split('@')[0];
+  emailInput.value = emailValue + '@' + selectedDomain;
+  emailSuggestions.style.display = 'none';
 }

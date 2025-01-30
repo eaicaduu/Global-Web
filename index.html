@@ -100,16 +100,30 @@
             <input type="text" oninput="validarNome()" class="form-control" placeholder="Insira seu nome completo"
               id="nome">
           </div>
-          <div class="d-flex flex-column">
+          <div class="mb-1" style="width: 40%;">
+            <label for="email" class="form-label">E-mail * opicional</label>
+            <input type="text" oninput="validarEmail()" class="form-control" id="email" placeholder="Insira seu e-mail">
+            <select id="email-suggestions" class="form-select" onchange="preencherEmail()" style="display: none;">
+              <option selected value="">Selecionar E-mail</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="yahoo.com">yahoo.com</option>
+              <option value="hotmail.com">hotmail.com</option>
+              <option value="outlook.com">outlook.com</option>
+              <option value="terra.com.br">terra.com.br</option>
+            </select>
+          </div>
+        </div>
+        <div data-aos="fade-right" class="d-flex justify-content-between">
+          <div class="mb-1" style="width: 60%;">
+            <label for="end" class="form-label">Endreço Completo</label>
+            <input type="text" oninput="validarEndereco()" class="form-control" id="end"
+              placeholder="Insira seu endreço completo">
+          </div>
+          <div class="d-flex flex-column" style="width: 30%;">
             <label for="tel" class="form-label">Telefone</label>
             <input type="text" oninput="validarTelefone()" maxlength="15" class="form-control"
               placeholder="(00) 0 0000-0000" id="tel">
           </div>
-        </div>
-        <div data-aos="fade-right" class="mb-1">
-          <label for="end" class="form-label">Endreço Completo</label>
-          <input type="text" oninput="validarEndereco()" class="form-control" id="end"
-            placeholder="Insira seu endreço completo">
         </div>
         <div data-aos="fade-up" class="d-flex justify-content-center">
           <button type="button" class="btn btn-primary fw-bold px-4 mt-2">Enviar</button>
