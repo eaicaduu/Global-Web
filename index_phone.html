@@ -20,12 +20,12 @@
     <header class="bg-white shadow-sm w-100 d-column justify-content-center text-center">
         <img src="images/logo_global.png" class="pt-2" width="200px">
         <hr>
-        <div class="d-flex align-items-center justify-content-evenly pb-3" style="overflow-y: auto; width: 100%;">
-            <div class="d-column ms-3" style="width: 80px;">
+        <div class="d-flex align-items-center justify-content-evenly pb-3" style="overflow: auto;">
+            <div class="d-column" style="width: 80px;">
                 <a href="#planos" class="text-dark link-underline link-underline-opacity-0">
                     <button
                         class="btn btn-light border-primary border-3 rounded-circle border d-flex justify-content-center align-items-center"
-                        style="overflow-y: auto; width: 80px; height: 80px;">
+                        style="width: 80px; height: 80px;">
                         <img src="images/language_24dp.png" width="40px">
                     </button>
                     <span class="fs-6 fw-bold">Nossos Planos</span>
@@ -35,7 +35,7 @@
                 <a href="#empresa" class="text-dark link-underline link-underline-opacity-0">
                     <button
                         class="btn btn-light border-primary border-3 rounded-circle border d-flex justify-content-center align-items-center"
-                        style="overflow-y: auto; width: 80px; height: 80px;">
+                        style="width: 80px; height: 80px;">
                         <img src="images/groups_24dp.png" width="40px">
                     </button>
                     <span class="fs-6 fw-bold">Sobre a Global</span>
@@ -46,7 +46,7 @@
                     class="text-dark link-underline link-underline-opacity-0">
                     <button
                         class="btn btn-light border-primary border-3 rounded-circle border d-flex justify-content-center align-items-center"
-                        style="overflow-y: auto; width: 80px; height: 80px;">
+                        style="width: 80px; height: 80px;">
                         <img src="images/print_24dp.png" width="40px">
                     </button>
                     <span class="fs-6 fw-bold">2ª Via Boleto</span>
@@ -55,7 +55,7 @@
             <div class="d-column ms-3" style="width: 80px;">
                 <button onclick="instrucoes1()"
                     class="btn btn-light border-primary border-3 rounded-circle border d-flex justify-content-center align-items-center"
-                    style="overflow-y: auto; width: 80px; height: 80px;">
+                    style="width: 80px; height: 80px;">
                     <img src="images/network_check_24dp.png" width="40px">
                 </button>
                 <span class="fs-6 fw-bold">Teste de Conexão</span>
@@ -65,17 +65,17 @@
                     class="text-dark link-underline link-underline-opacity-0">
                     <button
                         class="btn btn-light border-primary border-3 rounded-circle border d-flex justify-content-center align-items-center"
-                        style="overflow-y: auto; width: 80px; height: 80px;">
+                        style="width: 80px; height: 80px;">
                         <img src="images/support_agent_24dp.png" width="40px">
                     </button>
                     <span class="fs-6 fw-bold">Suporte Técnico</span>
                 </a>
             </div>
-            <div class="d-column ms-3" style="width: 80px;">
+            <div class="d-column ms-3 pe-3" style="width: 80px;">
                 <a href="#app" class="text-dark link-underline link-underline-opacity-0">
                     <button
                         class="btn btn-light border-primary border-3 rounded-circle border d-flex justify-content-center align-items-center"
-                        style="overflow-y: auto; width: 80px; height: 80px;">
+                        style="width: 80px; height: 80px;">
                         <img src="images/smartphone_24dp.png" width="40px">
                     </button>
                     <span class="fs-6 fw-bold">App GlobalNet</span>
@@ -100,19 +100,20 @@
                 <label for="email" class="form-label">E-mail * opicional</label>
                 <input type="text" oninput="validarEmail()" class="form-control form-control-lg" id="email"
                     placeholder="Insira seu e-mail">
-                    <select id="email-suggestions" class="form-select form-select-lg" onchange="preencherEmail()" style="display: none;">
-                        <option selected value="">Selecionar E-mail</option>
-                        <option value="gmail.com">gmail.com</option>
-                        <option value="yahoo.com">yahoo.com</option>
-                        <option value="hotmail.com">hotmail.com</option>
-                        <option value="outlook.com">outlook.com</option>
-                        <option value="terra.com.br">terra.com.br</option>
-                      </select>
+                <select id="email-suggestions" class="form-select form-select-lg" onchange="preencherEmail()"
+                    style="display: none;">
+                    <option selected value="">Selecionar E-mail</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="yahoo.com">yahoo.com</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="outlook.com">outlook.com</option>
+                    <option value="terra.com.br">terra.com.br</option>
+                </select>
             </div>
             <div data-aos="fade-up" class="mb-2">
                 <label for="tel" class="form-label">Telefone</label>
-                <input type="text" inputmode="numeric" pattern="[0-9]*" oninput="validarTelefone()" maxlength="15" class="form-control form-control-lg"
-                    placeholder="(00) 0 0000-0000" id="tel">
+                <input type="text" inputmode="numeric" pattern="[0-9]*" oninput="validarTelefone()" maxlength="15"
+                    class="form-control form-control-lg" placeholder="(00) 0 0000-0000" id="tel">
             </div>
             <div id="planos" data-aos="fade-up" class="mb-2">
                 <label for="end" class="form-label">Endreço Completo</label>
@@ -129,10 +130,9 @@
 
     <aside>
         <div data-aos="zoom-in-up" data-aos-duration="700" class="d-flex align-items-center my-2 py-5"
-            style="overflow-x: auto; width: 100%; white-space: nowrap;">
+            style="overflow-x: auto; white-space: nowrap;">
 
-
-            <div class="border rounded p-4 ms-4 shadow-sm">
+            <div class="border rounded p-4 shadow-sm">
                 <div class="d-flex align-items-center justify-content-between">
                     <h2 class="text-primary fw-bold">
                         <span>100</span>
@@ -165,8 +165,10 @@
                         <label class="form-check-label ms-2" for="str100">Streaming + R$9,90</label>
                     </div>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
                         class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+                      </div>
             </div>
 
             <div class="border rounded p-4 ms-4 shadow-sm" style="width: max-content;">
@@ -202,8 +204,10 @@
                         <label class="form-check-label ms-2" for="str400">Streaming + R$9,90</label>
                     </div>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
                         class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+                      </div>
             </div>
 
             <div class="border rounded p-4 ms-4 shadow-sm">
@@ -240,8 +244,10 @@
                         <label class="form-check-label ms-2" for="tel600">Telefone Fixo + R$14,90</label>
                     </div>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
                         class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+                      </div>
             </div>
 
             <div class="border rounded p-4 me-4 ms-4 shadow-sm">
@@ -279,8 +285,10 @@
                         <label class="form-check-label ms-2">Telefone Fixo + R$14,90</label>
                     </div>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
                         class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+                      </div>
             </div>
 
         </div>
@@ -403,7 +411,7 @@
 
     <a href="https://api.whatsapp.com/send?phone=5551991437617">
         <img src="images/whatsapp-icon.png" alt="WhatsApp Icon" class="img-fluid position-fixed"
-            style="width: 50px; height: 50px; bottom: 30px; right: 30px; animation: bounce 2s infinite;">
+            style="width: 70px; height: 70px; bottom: 30px; right: 30px; animation: bounce 2s infinite;">
     </a>
 
 </body>
