@@ -17,33 +17,43 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/alert.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/screen.js"></script>
+
+  <div id="main-content" style="display: none;">
+    <div class="container mt-5">
+        <h1>Bem-vindo à Página!</h1>
+        <p>Este é o conteúdo principal da página.</p>
+    </div>
+</div>
 
   <header>
-    <nav class="navbar bg-white fixed-top shadow">
+    <nav id="navbar" class="navbar fixed-top shadow">
       <div class="container-fluid">
         <div class="d-flex justify-content-between align-items-center vw-100">
           <div class="d-flex">
             <img src="images/logo_global.png " class="ms-3 pe-none" width="200px">
             <ul class="navbar-nav nav-underline flex-row ms-4">
               <li class="nav-item">
-                <a class="nav-link text-dark" href="#app">Nosso App</a>
+                <a id="navitem" class="nav-link" href="#app">Nosso App</a>
               </li>
               <li class="nav-item ms-3">
-                <a class="nav-link text-dark" href="#empresa">Sobre nós</a>
+                <a id="navitem" class="nav-link" href="#empresa">Sobre nós</a>
               </li>
               <li class="nav-item ms-3">
-                <a class="nav-link text-dark" href="#planos">Planos</a>
+                <a id="navitem" class="nav-link" href="#planos">Planos</a>
               </li>
               <li class="nav-item ms-3">
-                <a class="nav-link text-dark" target="_blank" href="contrato.pdf">Contrato</a>
+                <a id="navitem" class="nav-link" target="_blank" href="contrato.pdf">Contrato</a>
               </li>
               <li class="nav-item ms-3">
-                <a class="nav-link text-dark" href="#atendimento">Atendimento</a>
+                <a id="navitem" class="nav-link" href="#atendimento">Atendimento</a>
               </li>
             </ul>
           </div>
           <div class="d-flex me-3">
-            <a href="https://www.instagram.com/globalnetcachoeirinha/" target="_blank"><img class="zoom-image"
+            <img src="images/light_mode_24dp.png" id="theme" width="30px" class="zoom-image">
+            <a href="https://www.instagram.com/globalnetcachoeirinha/" target="_blank"><img class="zoom-image ms-3"
                 src="images/Instagram_icon.png" width="30px"></a>
             <a href="https://www.facebook.com/GlobalnetCachoeirinha" target="_blank"><img class="zoom-image ms-3"
                 src="images/facebook.png" width="30px"></a>
@@ -67,7 +77,8 @@
 
   <article class="d-flex justify-content-between">
     <div class="p-4 w-50">
-      <h1 class="py-4" data-aos="fade-up" data-aos-duration="400">Atendimento</h1>
+      <div class="text-change">
+      <h1 class="py-4" data-aos="fade-up" data-aos-duration="400">Atendimento</h1></div>
 
       <div data-aos="zoom-in-up" class="btn btn-light shadow-sm rounded-4 border me-2" style="width: 130px;">
         <a href="http://sistema.globalnetprovedor.com/" class="text-dark link-underline link-underline-opacity-0">
@@ -91,17 +102,17 @@
       </div>
     </div>
 
-    <div class="d-flex flex-column p-4 w-50">
+    <div class="d-flex flex-column p-4 w-50 text-change">
       <h1 class="pt-4" data-aos="fade-up" data-aos-duration="400">Formulário</h1>
       <form id="form" class="me-4" method="post">
         <div data-aos="fade-right" class="mb-1 d-flex justify-content-between">
           <div class="d-flex flex-column" style="width: 50%;">
-            <label for="nome" class="form-label">Nome Completo</label>
+            <label for="nome" class="form-label text-change">Nome Completo</label>
             <input type="text" oninput="validarNome()" class="form-control" placeholder="Insira seu nome completo"
               id="nome">
           </div>
           <div class="mb-1" style="width: 40%;">
-            <label for="email" class="form-label">E-mail * opicional</label>
+            <label for="email" class="form-label text-change">E-mail * opicional</label>
             <input type="text" oninput="validarEmail()" class="form-control" id="email" placeholder="Insira seu e-mail">
             <select id="email-suggestions" class="form-select" onchange="preencherEmail()" style="display: none;">
               <option selected value="">Selecionar E-mail</option>
@@ -115,12 +126,12 @@
         </div>
         <div data-aos="fade-right" class="d-flex justify-content-between">
           <div class="mb-1" style="width: 60%;">
-            <label for="end" class="form-label">Endreço Completo</label>
+            <label for="end" class="form-label text-change">Endreço Completo</label>
             <input type="text" oninput="validarEndereco()" class="form-control" id="end"
               placeholder="Insira seu endreço completo">
           </div>
           <div class="d-flex flex-column" style="width: 30%;">
-            <label for="tel" class="form-label">Telefone</label>
+            <label for="tel" class="form-label text-change">Telefone</label>
             <input type="text" oninput="validarTelefone()" maxlength="15" class="form-control"
               placeholder="(00) 0 0000-0000" id="tel">
           </div>
@@ -134,22 +145,22 @@
   </article>
 
   <aside>
-    <div class="p-4">
+    <div class="p-4 text-change">
       <h1 class="py-4" data-aos="fade-up">Planos GlobalNet</h1>
 
       <div class="d-flex justify-content-evenly">
 
-        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm" style="width: 300px; ">
+        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm ms-2" style="width: 300px; ">
           <div class="d-flex align-items-center justify-content-between">
             <h2 class="text-primary fw-bold">
               <span>100</span>
               <span class="fs-3">MEGAS</span>
             </h2>
-            <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+            <img src="images/wifi_dark_24dp.png" class="pe-none theme-icon" width="50px" height="50px">
           </div>
-          <div class="text-start">
+          <div class="text-start text-change">
             <h4>
-              <span class="fs-6">Oferta por</span>
+              <span class="fs-6 ">Oferta por</span>
               <br>
               <span class="fs-5">R$</span>
               <span id="valor100" class="fs-1">89,90</span>
@@ -157,16 +168,16 @@
               <span class="fs-6">Até o vencimento</span>
             </h4>
           </div>
-          <h5 class="text-start">Turbine seu plano</h5>
+          <h5 class="text-start text-change">Turbine seu plano</h5>
           <div class="d-flex align-items-center mb-2">
-            <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
-            <div class="form-check form-switch d-flex align-items-center">
+            <img src="images/call_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
+            <div class="form-check form-switch d-flex align-items-center text-change">
               <input class="form-check-input" type="checkbox" role="switch" id="tel100" data-valor="14.90">
               <label class="form-check-label ms-2" for="tel100">Telefone Fixo + R$14,90</label>
             </div>
           </div>
-          <div class="d-flex align-items-center mb-2">
-            <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+          <div class="d-flex align-items-center mb-2 text-change">
+            <img src="images/live_tv_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
             <div class="form-check form-switch d-flex align-items-center">
               <input class="form-check-input" type="checkbox" role="switch" id="str100" data-valor="9.90">
               <label class="form-check-label ms-2" for="str100">Streaming + R$9,90</label>
@@ -178,15 +189,15 @@
             </div>
         </div>
 
-        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm" style="width: 300px; ">
+        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm ms-2" style="width: 300px; ">
           <div class="d-flex align-items-center justify-content-between">
             <h2 class="text-primary fw-bold">
               <span>400</span>
               <span class="fs-3">MEGAS</span>
             </h2>
-            <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+            <img src="images/wifi_dark_24dp.png" class="pe-none theme-icon" width="50px" height="50px">
           </div>
-          <div class="text-start">
+          <div class="text-start text-change">
             <h4>
               <span class="fs-6">Oferta por</span>
               <br>
@@ -196,16 +207,16 @@
               <span class="fs-6">Até o vencimento</span>
             </h4>
           </div>
-          <h5 class="text-start">Turbine seu plano</h5>
-          <div class="d-flex align-items-center mb-2">
-            <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+          <h5 class="text-start text-change">Turbine seu plano</h5>
+          <div class="d-flex align-items-center mb-2 text-change">
+            <img src="images/call_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
             <div class="form-check form-switch d-flex align-items-center">
               <input class="form-check-input" type="checkbox" role="switch" id="tel400" data-valor="14.90">
               <label class="form-check-label ms-2" for="tel400">Telefone Fixo + R$14,90</label>
             </div>
           </div>
-          <div class="d-flex align-items-center mb-2">
-            <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+          <div class="d-flex align-items-center mb-2 text-change">
+            <img src="images/live_tv_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
             <div class="form-check form-switch d-flex align-items-center">
               <input class="form-check-input" type="checkbox" role="switch" id="str400" data-valor="9.90">
               <label class="form-check-label ms-2" for="str400">Streaming + R$9,90</label>
@@ -217,15 +228,15 @@
               </div>
         </div>
 
-        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm" style="width: 300px; ">
+        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm ms-2" style="width: 300px; ">
           <div class="d-flex align-items-center justify-content-between">
             <h2 class="text-primary fw-bold">
               <span>600</span>
               <span class="fs-3">MEGAS</span>
             </h2>
-            <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+            <img src="images/wifi_dark_24dp.png" class="pe-none theme-icon" width="50px" height="50px">
           </div>
-          <div class="text-start">
+          <div class="text-start text-change">
             <h4>
               <span class="fs-6">Oferta por</span>
               <br>
@@ -235,17 +246,17 @@
               <span class="fs-6">Até o vencimento</span>
             </h4>
           </div>
-          <h5 class="text-start">Turbine seu plano</h5>
-          <div class="d-flex align-items-center mb-2">
-            <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+          <h5 class="text-start text-change">Turbine seu plano</h5>
+          <div class="d-flex align-items-center mb-2 text-change">
+            <img src="images/live_tv_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
             <div class="form-check form-switch d-flex align-items-center">
               <input class="form-check-input" checked disabled type="checkbox" role="switch" id="str600"
                 data-valor="9.90">
               <label class="form-check-label ms-2" for="str">Streaming</label>
             </div>
           </div>
-          <div class="d-flex align-items-center mb-2">
-            <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+          <div class="d-flex align-items-center mb-2 text-change">
+            <img src="images/call_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
             <div class="form-check form-switch d-flex align-items-center">
               <input class="form-check-input" type="checkbox" role="switch" id="tel600" data-valor="14.90">
               <label class="form-check-label ms-2" for="tel600">Telefone Fixo + R$14,90</label>
@@ -257,15 +268,15 @@
               </div>
         </div>
 
-        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm" style="width: 300px;  ">
+        <div data-aos="flip-left" data-aos-duration="700" class="border rounded p-4 shadow-sm ms-2" style="width: 300px;  ">
           <div class="d-flex align-items-center justify-content-between">
             <h2 class="text-primary fw-bold">
               <span>999</span>
               <span class="fs-3">MEGAS</span>
             </h2>
-            <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+            <img src="images/wifi_dark_24dp.png" class="pe-none theme-icon" width="50px" height="50px">
           </div>
-          <div class="text-start">
+          <div class="text-start text-change">
             <h4>
               <span class="fs-6">Oferta por</span>
               <br>
@@ -275,17 +286,17 @@
               <span class="fs-6">Até o vencimento</span>
             </h4>
           </div>
-          <h5 id="empresa" class="text-start">Turbine seu plano</h5>
-          <div class="d-flex align-items-center mb-2">
-            <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+          <h5 class="text-start text-change">Turbine seu plano</h5>
+          <div class="d-flex align-items-center mb-2 text-change">
+            <img src="images/live_tv_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
             <div class="form-check form-switch d-flex align-items-center">
               <input class="form-check-input" checked disabled type="checkbox" role="switch" id="str600"
                 data-valor="9.90">
               <label class="form-check-label ms-2" for="str">Streaming</label>
             </div>
           </div>
-          <div class="d-flex align-items-center mb-2">
-            <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+          <div class="d-flex align-items-center mb-2 text-change">
+            <img src="images/call_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
             <div class="form-check form-switch d-flex align-items-center">
               <input class="form-check-input" checked disabled type="checkbox" role="switch" data-valor="14.90">
               <label class="form-check-label ms-2">Telefone Fixo + R$14,90</label>
@@ -296,26 +307,25 @@
                 class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
               </div>
         </div>
-
       </div>
     </div>
 
   </aside>
 
-  <main>
-    <div class="d-flex justify-content-center align-items-center bg-white text-dark pt-2 p-4 vw-100 h-100">
-      <div class="container">
-        <h2 data-aos="fade-down" class="text-center mb-4">
-          <span class="text-dark">Sobre a</span>
+  <main id="empresa">
+    <div class="d-flex justify-content-center align-items-center text-dark pt-2 p-4 vw-100 h-100">
+      <div class="container text-change">
+        <h2 data-aos="fade-up" class="text-center mb-4">
+          <span>Sobre a</span>
           <span class="text-primary fw-bold">Global<span class="text-warning fw-bold">Net</span></span>
 
         </h2>
-        <p class="lead" data-aos="fade-down">
+        <p class="lead" data-aos="fade-up">
           A GlobalNet é uma empresa de tecnologia com sede em Cachoeirinha, Rio Grande do Sul, que oferece soluções
           modernas de conectividade desde 2010. Inicialmente atuando no setor de tecnologia, migramos para o ramo de
           telecomunicações em 2018, consolidando-nos como um dos principais provedores de internet da região.
         </p>
-        <p class="lead" data-aos="fade-down">
+        <p class="lead" data-aos="fade-up">
           Nossa missão é conectar pessoas e negócios, oferecendo serviços de alta qualidade com atendimento
           personalizado.
           Com uma infraestrutura robusta e tecnologia de ponta, a GlobalNet proporciona planos de internet
@@ -323,22 +333,22 @@
           estáveis e acessíveis, garantindo a melhor experiência para residências, empresas e instituições de todos os
           portes.
         </p>
-        <p id="app" class="lead" data-aos="fade-down">
+        <p id="app" class="lead" data-aos="fade-up">
           Mais do que entregar conexão, acreditamos em fortalecer comunidades, fomentar o crescimento local e
           simplificar
           o acesso ao mundo digital. Contamos com uma equipe qualificada, suporte técnico eficiente e um compromisso
           constante com a inovação e a satisfação dos nossos clientes.
         </p>
-        <div class="text-center mt-4" data-aos="fade-down">
+        <div class="text-center mt-4" data-aos="fade-up">
           <img src="images/anatel.png" class="img-fluid pe-none" style="max-width: 200px;">
         </div>
       </div>
     </div>
   </main>
 
-  <hr>
+  <hr id="hr">
 
-  <div class="text-center vw-100">
+  <div class="text-center vw-100 text-change">
     <h1 class="mt-4" data-aos="fade-up">Baixe o app da GlobalNet</h1>
     <h5 data-aos="fade-up">A GlobalNet quer te manter sempre conectado e estar cada vez mais próximo de você! </h5>
     <div class="d-flex justify-content-center p-3 my-5">
@@ -381,19 +391,15 @@
     <div class="d-flex justify-content-evenly p-3 align-items-center text-center w-100">
       <div data-aos="flip-right" data-aos-duration="700" style="width: 30%;" class="p-3 border rounded-4">
         <img src="images/cell_tower_24dp.png" width="80px">
-        <p class="fs-6s">Suporte 𝟮𝟰 𝗵𝗼𝗿𝗮𝘀 no whatsapp para garantir que seus
-          problemas sejam resolvidos a qualquer momento, em qualquer dia da semana.</p>
+        <p class="fs-6">Suporte 𝟮𝟰 𝗵𝗼𝗿𝗮𝘀 no whatsapp para garantir que seus problemas sejam resolvidos a qualquer momento, em qualquer dia da semana.</p>
       </div>
       <div data-aos="flip-right" data-aos-duration="700" style="width: 30%;" class="p-3 border rounded-4">
         <img src="images/5g_24dp.png" width="80px">
-        <p class="fs-6">Possuimos roteadores com Wi-Fi 5G <br> para sua navegação ser ainda mais veloz, ideal para jogos
-          online e
-          downloads sem interrupções.</p>
+        <p class="fs-6">Possuimos roteadores com Wi-Fi 5G <br> para sua navegação ser ainda mais veloz, ideal para jogos online e downloads sem interrupções.</p>
       </div>
       <div data-aos="flip-right" data-aos-duration="700" style="width: 30%;" class="p-3 border rounded-4">
         <img src="images/verified_user_24dp.png" width="80px">
-        <p class="fs-6">Velocidade, conexão estável, desempenho e segurança. Ideal para clientes que
-          buscam eficiência, confiança e tecnologia de ponta.</p>
+        <p class="fs-6">Velocidade constante, conexão estável, desempenho e segurança. Ideal para clientes que buscam eficiência, confiança e tecnologia de ponta.</p>
       </div>
     </div>
 

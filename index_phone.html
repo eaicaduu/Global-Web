@@ -16,9 +16,17 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/alert.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/screen.js"></script>
 
-    <header class="bg-white shadow-sm w-100 d-column justify-content-center text-center">
-        <img src="images/logo_global.png" class="pt-2" width="200px">
+    <div id="main-content" style="display: none;">
+    </div>
+
+    <header id="navbar" class="bg-white shadow-sm w-100 d-column justify-content-center text-center">
+        <div>
+            <img src="images/logo_global.png" class="pt-2" width="200px">
+            <img src="images/light_mode_24dp.png" id="theme" width="30px" style="position: absolute; top: 10px; right: 10px;" >
+        </div>
         <hr>
         <div class="d-flex align-items-center justify-content-evenly pb-3" style="overflow: auto;">
             <div class="d-column" style="width: 80px;">
@@ -28,7 +36,7 @@
                         style="width: 80px; height: 80px;">
                         <img src="images/language_24dp.png" width="40px">
                     </button>
-                    <span class="fs-6 fw-bold">Nossos Planos</span>
+                    <span class="fs-6 fw-bold text-change">Nossos Planos</span>
                 </a>
             </div>
             <div class="d-column ms-3" style="width: 80px;">
@@ -38,7 +46,7 @@
                         style="width: 80px; height: 80px;">
                         <img src="images/groups_24dp.png" width="40px">
                     </button>
-                    <span class="fs-6 fw-bold">Sobre a Global</span>
+                    <span class="fs-6 fw-bold text-change">Sobre a Global</span>
                 </a>
             </div>
             <div class="d-column ms-3" style="width: 80px;">
@@ -49,7 +57,7 @@
                         style="width: 80px; height: 80px;">
                         <img src="images/print_24dp.png" width="40px">
                     </button>
-                    <span class="fs-6 fw-bold">2ª Via Boleto</span>
+                    <span class="fs-6 fw-bold text-change">2ª Via Boleto</span>
                 </a>
             </div>
             <div class="d-column ms-3" style="width: 80px;">
@@ -58,7 +66,7 @@
                     style="width: 80px; height: 80px;">
                     <img src="images/network_check_24dp.png" width="40px">
                 </button>
-                <span class="fs-6 fw-bold">Teste de Conexão</span>
+                <span class="fs-6 fw-bold text-change">Teste de Conexão</span>
             </div>
             <div class="d-column ms-3" style="width: 80px;">
                 <a href="https://api.whatsapp.com/send?phone=5551991437617" target="_blank"
@@ -68,7 +76,7 @@
                         style="width: 80px; height: 80px;">
                         <img src="images/support_agent_24dp.png" width="40px">
                     </button>
-                    <span class="fs-6 fw-bold">Suporte Técnico</span>
+                    <span class="fs-6 fw-bold text-change">Suporte Técnico</span>
                 </a>
             </div>
             <div class="d-column ms-3 pe-3" style="width: 80px;">
@@ -78,7 +86,7 @@
                         style="width: 80px; height: 80px;">
                         <img src="images/smartphone_24dp.png" width="40px">
                     </button>
-                    <span class="fs-6 fw-bold">App GlobalNet</span>
+                    <span class="fs-6 fw-bold text-change">App GlobalNet</span>
                 </a>
             </div>
         </div>
@@ -88,7 +96,7 @@
         <img src="images/background_phone.png" class="pe-none" style="height: 80vh; object-fit: cover; width: 100%;">
     </section>
 
-    <div>
+    <div class="text-change">
         <h1 class="py-4 text-center" data-aos="fade-up" data-aos-duration="400">Formulário</h1>
         <form id="form" class="mx-3" method="post">
             <div data-aos="fade-up" class="mb-2">
@@ -126,9 +134,9 @@
         </form>
     </div>
 
-    <hr>
+    <hr id="hr">
 
-    <aside>
+    <aside class="text-change">
         <div data-aos="zoom-in-up" data-aos-duration="700" class="d-flex align-items-center my-2 py-5"
             style="overflow-x: auto; white-space: nowrap;">
 
@@ -138,7 +146,7 @@
                         <span>100</span>
                         <span class="fs-3">MEGAS</span>
                     </h2>
-                    <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+                    <img src="images/wifi_dark_24dp.png" class="pe-none theme-icon" width="50px" height="50px">
                 </div>
                 <div class="text-start">
                     <h4>
@@ -152,14 +160,14 @@
                 </div>
                 <h5 class="text-start">Turbine seu plano</h5>
                 <div class="d-flex align-items-center mb-2">
-                    <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+                    <img src="images/call_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
                     <div class="form-check form-switch d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" role="switch" id="tel100" data-valor="14.90">
                         <label class="form-check-label ms-2" for="tel100">Telefone Fixo + R$14,90</label>
                     </div>
                 </div>
                 <div class="d-flex align-items-center mb-2">
-                    <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+                    <img src="images/live_tv_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
                     <div class="form-check form-switch d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" role="switch" id="str100" data-valor="9.90">
                         <label class="form-check-label ms-2" for="str100">Streaming + R$9,90</label>
@@ -167,8 +175,8 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
-                        class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
-                      </div>
+                            class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+                </div>
             </div>
 
             <div class="border rounded p-4 ms-4 shadow-sm" style="width: max-content;">
@@ -177,7 +185,7 @@
                         <span>400</span>
                         <span class="fs-3">MEGAS</span>
                     </h2>
-                    <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+                    <img src="images/wifi_dark_24dp.png" class="pe-none theme-icon" width="50px" height="50px">
                 </div>
                 <div class="text-start">
                     <h4>
@@ -191,14 +199,14 @@
                 </div>
                 <h5 class="text-start">Turbine seu plano</h5>
                 <div class="d-flex align-items-center mb-2">
-                    <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+                    <img src="images/call_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
                     <div class="form-check form-switch d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" role="switch" id="tel400" data-valor="14.90">
                         <label class="form-check-label ms-2" for="tel400">Telefone Fixo + R$14,90</label>
                     </div>
                 </div>
                 <div class="d-flex align-items-center mb-2">
-                    <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+                    <img src="images/live_tv_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
                     <div class="form-check form-switch d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" role="switch" id="str400" data-valor="9.90">
                         <label class="form-check-label ms-2" for="str400">Streaming + R$9,90</label>
@@ -206,8 +214,8 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
-                        class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
-                      </div>
+                            class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+                </div>
             </div>
 
             <div class="border rounded p-4 ms-4 shadow-sm">
@@ -216,7 +224,7 @@
                         <span>600</span>
                         <span class="fs-3">MEGAS</span>
                     </h2>
-                    <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+                    <img src="images/wifi_dark_24dp.png" class="pe-none theme-icon" width="50px" height="50px">
                 </div>
                 <div class="text-start">
                     <h4>
@@ -230,7 +238,7 @@
                 </div>
                 <h5 class="text-start">Turbine seu plano</h5>
                 <div class="d-flex align-items-center mb-2">
-                    <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+                    <img src="images/live_tv_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
                     <div class="form-check form-switch d-flex align-items-center">
                         <input class="form-check-input" checked disabled type="checkbox" role="switch" id="str600"
                             data-valor="9.90">
@@ -238,7 +246,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center mb-2">
-                    <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+                    <img src="images/call_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
                     <div class="form-check form-switch d-flex align-items-center">
                         <input class="form-check-input" type="checkbox" role="switch" id="tel600" data-valor="14.90">
                         <label class="form-check-label ms-2" for="tel600">Telefone Fixo + R$14,90</label>
@@ -246,8 +254,8 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
-                        class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
-                      </div>
+                            class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+                </div>
             </div>
 
             <div class="border rounded p-4 me-4 ms-4 shadow-sm">
@@ -256,7 +264,7 @@
                         <span>999</span>
                         <span class="fs-3">MEGAS</span>
                     </h2>
-                    <img src="images/wifi_24dp.png" class="pe-none" width="50px" height="50px">
+                    <img src="images/wifi_dark_24dp.png" class="pe-none theme-icon" width="50px" height="50px">
                 </div>
                 <div class="text-start">
                     <h4>
@@ -270,7 +278,7 @@
                 </div>
                 <h5 class="text-start">Turbine seu plano</h5>
                 <div class="d-flex align-items-center mb-2">
-                    <img src="images/live_tv_24dp.png" class="pe-none me-2" width="20px" height="20px">
+                    <img src="images/live_tv_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
                     <div class="form-check form-switch d-flex align-items-center">
                         <input class="form-check-input" checked disabled type="checkbox" role="switch" id="str600"
                             data-valor="9.90">
@@ -278,7 +286,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center mb-2">
-                    <img src="images/call.png" class="pe-none me-2" width="20px" height="20px">
+                    <img src="images/call_dark_24dp.png" class="pe-none me-2 theme-icon" width="20px" height="20px">
                     <div class="form-check form-switch d-flex align-items-center">
                         <input class="form-check-input" checked disabled type="checkbox" role="switch"
                             data-valor="14.90">
@@ -287,8 +295,8 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
-                        class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
-                      </div>
+                            class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
+                </div>
             </div>
 
         </div>
@@ -296,7 +304,7 @@
 
     <hr>
 
-    <div class="text-center w-100" id="app">
+    <div class="text-center w-100 text-change" id="app">
         <div data-aos="fade-up" data-aos-duration="400">
             <h1 class="mt-4">Baixe o app da GlobalNet</h1>
             <h6>A GlobalNet quer te manter sempre conectado e estar cada vez mais próximo de você! </h6>
@@ -338,10 +346,10 @@
     <hr>
 
     <main id="empresa">
-        <div class="d-flex justify-content-center align-items-center bg-white text-dark pt-3 p-4 vw-100 h-100">
-            <div class="container">
+        <div class="d-flex justify-content-center align-items-center text-dark pt-3 p-4 vw-100 h-100">
+            <div class="container text-change">
                 <h2 data-aos="fade-up" class="text-center mb-4">
-                    <span class="text-dark">Sobre a</span>
+                    <span>Sobre a</span>
                     <span class="text-primary fw-bold">Global<span class="text-warning fw-bold">Net</span></span>
 
                 </h2>
