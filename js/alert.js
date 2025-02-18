@@ -28,7 +28,7 @@ function instrucoes2() {
   Swal.fire({
     html: `
       <h3 style="font-weight: bold;">Passo a Passo para Testar a Velocidade da Sua Internet</h3> <br>
-      2º Feche programas e dispositivos que usam <br>
+      2º Feche todos os programas e dispositivos que usam <br>
       internet para evitar resultados imprecisos. <br>
       Feche vídeos, downloads, chamadas de vídeo <br>
       e outros aplicativos que consomem a conexão.<br>
@@ -103,7 +103,7 @@ function instrucoes5() {
       Verifique a velocidade contratada no seu plano. <br>
       <br>
       <a onclick="Swal.close();" target="_blank" href="https://fast.com"><button class="btn btn-warning fw-bold fs-5 text-white">Realizar Teste
-      <img src="images/wifi_tethering_error_24dp4.png" width="25px"></button></a>
+      <img src="images/wifi_test_24dp.png" width="25px"></button></a>
       <br>
       <br>Se os valores estiverem muito abaixo do esperado:<br>
       Reinicie o roteador e refaça o teste ou<br>
@@ -113,7 +113,7 @@ function instrucoes5() {
       <button onclick="instrucoes4();" class="btn btn-danger">Voltar</button>
       <a class="link-underline link-underline-opacity-0 text-white" href="https://api.whatsapp.com/send?phone=5551991437617">
       <button class="btn btn-success">WhatsApp</a>
-      <a onclick="Swal.close(); instrucoes5()"
+      <a onclick="Swal.close(); instrucoes5()">
       </a>
       </div>`,
     showCancelButton: false,
@@ -152,9 +152,9 @@ function atualizarValor() {
   if (document.getElementById("tel600").checked) valorFinal600 += valorTel;
   if (document.getElementById("str600").checked) valorFinal600 += valorStr;
 
-  document.getElementById("valor100").textContent = valorFinal100.toFixed(2);
-  document.getElementById("valor400").textContent = valorFinal400.toFixed(2);
-  document.getElementById("valor600").textContent = valorFinal600.toFixed(2);
+  document.getElementById("valor100").textContent = valorFinal100.toFixed(2).replace('.', ',');
+  document.getElementById("valor400").textContent = valorFinal400.toFixed(2).replace('.', ',');
+  document.getElementById("valor600").textContent = valorFinal600.toFixed(2).replace('.', ',');
 }
 
 document.addEventListener('DOMContentLoaded', function () {

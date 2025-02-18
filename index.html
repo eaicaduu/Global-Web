@@ -70,15 +70,15 @@
     <a href="#planos">
       <button id="atendimento"
         class="btn btn-warning shadow-sm rounded-4 text-white fs-4 fw-bold position-absolute translate-middle"
-        style="top: 65%; left: 20%;">Planos dispiníveis</button>
-    </a>7
+        style="top: 65%; left: 20%;">Planos disponíveis</button>
+    </a>
 
   </section>
 
   <article class="d-flex justify-content-between">
     <div class="p-4 w-50">
       <div class="text-change">
-      <h1 class="py-4" data-aos="fade-up" data-aos-duration="400">Atendimento</h1></div>
+      <h1 class="py-4" data-aos="fade-up" data-aos-duration="400" id="#atendimento">Atendimento</h1></div>
 
       <div data-aos="zoom-in-up" class="btn btn-light shadow-sm rounded-4 border me-2" style="width: 130px;">
         <a href="http://sistema.globalnetprovedor.com/" class="text-dark link-underline link-underline-opacity-0">
@@ -93,7 +93,7 @@
         <h5>Teste de Conexão</h5>
       </div>
 
-      <div data-aos="zoom-in-up" class="btn btn-light shadow-sm rounded-4 border me-2" style="width: 130px;">
+      <div data-aos="zoom-in-down" class="btn btn-light shadow-sm rounded-4 border me-2" style="width: 130px;">
         <a href="https://api.whatsapp.com/send?phone=5551991437617"
           class="text-dark link-underline link-underline-opacity-0">
           <img src="images/support_agent_24dp.png" width="80px">
@@ -112,7 +112,7 @@
               id="nome">
           </div>
           <div class="mb-1" style="width: 40%;">
-            <label for="email" class="form-label text-change">E-mail * opicional</label>
+            <label for="email" class="form-label text-change">E-mail * Opcional</label>
             <input type="text" oninput="validarEmail()" class="form-control" id="email" placeholder="Insira seu e-mail">
             <select id="email-suggestions" class="form-select" onchange="preencherEmail()" style="display: none;">
               <option selected value="">Selecionar E-mail</option>
@@ -126,12 +126,12 @@
         </div>
         <div data-aos="fade-right" class="d-flex justify-content-between">
           <div class="mb-1" style="width: 60%;">
-            <label for="end" class="form-label text-change">Endreço Completo</label>
+            <label for="end" class="form-label text-change">Endereço Completo</label>
             <input type="text" oninput="validarEndereco()" class="form-control" id="end"
               placeholder="Insira seu endreço completo">
           </div>
           <div class="d-flex flex-column" style="width: 30%;">
-            <label for="tel" class="form-label text-change">Telefone</label>
+            <label for="tel" class="form-label text-change">Telefone com DDD</label>
             <input type="text" oninput="validarTelefone()" maxlength="15" class="form-control"
               placeholder="(00) 0 0000-0000" id="tel">
           </div>
@@ -302,7 +302,7 @@
               <label class="form-check-label ms-2">Telefone Fixo + R$14,90</label>
             </div>
           </div>
-          <div class="d-flex justify-content-center align-items-center">
+          <div id="#planos" class="d-flex justify-content-center align-items-center">
             <a href="https://api.whatsapp.com/send?phone=5551991437617"><button
                 class="mt-2 fs-5 btn btn-warning rounded-4 text-white fw-bold">Selecionar</button></a>
               </div>
@@ -321,9 +321,10 @@
 
         </h2>
         <p class="lead" data-aos="fade-up">
-          A GlobalNet é uma empresa de tecnologia com sede em Cachoeirinha, Rio Grande do Sul, que oferece soluções
-          modernas de conectividade desde 2010. Inicialmente atuando no setor de tecnologia, migramos para o ramo de
-          telecomunicações em 2018, consolidando-nos como um dos principais provedores de internet da região.
+          A GlobalNet é um provedor de internet com sede em Cachoeirinha, Rio Grande do Sul, que oferece
+          soluções
+          modernas de conectividade desde 2010. Inicialmente atuando no setor de segurança, migramos para
+          o ramo internet em 2018, consolidando-nos como um dos principais provedores de internet da região.
         </p>
         <p class="lead" data-aos="fade-up">
           Nossa missão é conectar pessoas e negócios, oferecendo serviços de alta qualidade com atendimento

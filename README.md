@@ -1,2 +1,2 @@
-Landing Page feita com Bootstrap para empresa GlobalNet
-Desenvolvido por Carlos Eduardo Gregorio 18/02/25
+Landing Page GlobalNet
+Desenvolvido por Carlos Eduardo Gregorio | Data 18/02/25
