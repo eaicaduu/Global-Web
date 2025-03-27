@@ -123,52 +123,6 @@ function instrucoes5() {
   })
 }
 
-function atualizarValor() {
-  const valorBase100 = 89.90;
-  const valorBase400 = 99.90;
-  const valorBase600 = 129.90;
-
-  let valorTel = 14.90
-  let valorStr = 9.90
-
-  function calcularValorAdicional(planoBase, idSwitch, valorAdicional) {
-    const switchElement = document.getElementById(idSwitch);
-    if (switchElement.checked) {
-      return planoBase + valorAdicional;
-    }
-    return planoBase;
-  }
-
-  let valorFinal100 = valorBase100;
-  let valorFinal400 = valorBase400;
-  let valorFinal600 = valorBase600;
-
-  if (document.getElementById("tel100").checked) valorFinal100 += valorTel;
-  if (document.getElementById("str100").checked) valorFinal100 += valorStr;
-
-  if (document.getElementById("tel400").checked) valorFinal400 += valorTel;
-  if (document.getElementById("str400").checked) valorFinal400 += valorStr;
-
-  if (document.getElementById("tel600").checked) valorFinal600 += valorTel;
-  if (document.getElementById("str600").checked) valorFinal600 += valorStr;
-
-  document.getElementById("valor100").textContent = valorFinal100.toFixed(2).replace('.', ',');
-  document.getElementById("valor400").textContent = valorFinal400.toFixed(2).replace('.', ',');
-  document.getElementById("valor600").textContent = valorFinal600.toFixed(2).replace('.', ',');
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  const switches = document.querySelectorAll(".form-check-input");
-
-  if (switches.length > 0) {
-    switches.forEach(switchElement => {
-      switchElement.addEventListener('change', atualizarValor);
-    });
-
-    atualizarValor();
-  }
-});
-
 AOS.init({
   duration: 500,
 });
