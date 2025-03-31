@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         splashScreen.style.justifyContent = 'center';
         splashScreen.style.alignItems = 'center';
         splashScreen.style.zIndex = '9999';
-        splashScreen.style.transition = 'opacity 1s ease-out'; 
+        splashScreen.style.transition = 'opacity 0.5s ease-out'; 
 
     
         const logo = document.createElement('img');
@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {
                 splashScreen.style.display = 'none';
                 document.getElementById('main-content').style.display = 'none'; 
-            }, 2000);
-        }, 2000); 
+            }, 500);
+        }, 1500); 
     }
 
     showSplashScreen();

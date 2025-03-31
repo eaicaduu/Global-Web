@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.cookie = name + "=" + value + ";" + expires + ";path=/";
     }
 
-    if (!getCookie("cookies_aceitos")) {
+    if (getCookie("cookies_aceitos")) {
         const banner = document.createElement("div");
         banner.id = "cookieBanner";
         banner.classList.add("d-none");
@@ -59,12 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         document.getElementById("acceptCookies").addEventListener("click", function () {
-            const email = document.getElementById("userEmail").value;
-
-            if (email) {
-                setCookie("cookies_aceitos", "true", 365);
-                setCookie("user_email", email, 365);
-            }
+            setCookie("cookies_aceitos", "true", 365);
+            const email = getCookie("user_email") || null;
+            setCookie("user_email", email, 365);
 
             banner.classList.remove("show");
             banner.classList.add("hide");

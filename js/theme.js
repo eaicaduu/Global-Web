@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function applyTheme(darkMode) {
         if (darkMode) {
+
             body.classList.add("bg-dark");
             body.classList.remove("bg-white");
             
-            navbar.classList.add("bg-dark");
+            navbar.classList.add("bg-dark");    
             navbar.classList.remove("bg-white");
             
             hr.classList.add("text-white");
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             theme.src = "images/dark_mode_24dp.png";
         } else {
+
             body.classList.add("bg-white");
             body.classList.remove("bg-dark");
 
@@ -62,6 +64,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         localStorage.setItem("darkMode", darkMode ? "enabled" : "disabled");
     }
+
+    function updateNavbar() {
+        if (window.scrollY === 0) {
+            navbar.classList.add("bg-transparent");
+            navbar.classList.remove("shadow");
+        } else {
+            navbar.classList.remove("bg-transparent");
+            navbar.classList.add("shadow");
+        }
+    }
+
+    updateNavbar();
+
+    window.addEventListener('scroll', updateNavbar);
 
     const savedTheme = localStorage.getItem("darkMode");
     const darkMode = savedTheme === "enabled";
