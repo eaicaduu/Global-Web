@@ -41,7 +41,7 @@
         </div>
         <hr>
         <div class="d-flex align-items-center justify-content-evenly pb-3" style="overflow: auto;">
-            <div class="d-column" style="width: 80px;">
+            <div class="d-column ms-3" style="width: 80px;">
                 <a href="#planos" class="text-dark link-underline link-underline-opacity-0">
                     <button
                         class="btn btn-light border-primary border-3 rounded-circle border d-flex justify-content-center align-items-center"
@@ -91,25 +91,56 @@
                     <span class="fs-6 fw-bold text-change">Suporte Técnico</span>
                 </a>
             </div>
-            <div class="d-column ms-3 pe-3" style="width: 80px;">
+            <div class="d-column ms-3 me-3" style="width: 80px;">
                 <a href="#app" class="text-dark link-underline link-underline-opacity-0">
                     <button
                         class="btn btn-light border-primary border-3 rounded-circle border d-flex justify-content-center align-items-center"
                         style="width: 80px; height: 80px;">
                         <img src="images/smartphone_24dp.png" width="40px">
                     </button>
-                    <span class="fs-6 fw-bold text-change">App GlobalNet</span>
+                    <span class="fs-6 fw-bold text-change">Nosso App</span>
                 </a>
             </div>
         </div>
     </header>
 
     <section class="container-fluid bg-primary d-flex justify-content-center m-0 p-0">
-        <img src="images/background_phone.png" class="pe-none" style="height: 80vh; object-fit: cover; width: 100%;">
+        <div id="imageCarousel" class="carousel slide text-center" style="width: 100%;" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/3.png" class="pe-none" style="height: 80vh; object-fit: cover; max-width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/4.png" class="pe-none" style="height: 80vh; object-fit: cover; max-width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/2.png" class="pe-none" style="height: 80vh; object-fit: cover; max-width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/1.png" class="pe-none" style="height: 80vh; object-fit: cover; max-width: 100%;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </section>
 
     <div class="text-change">
-        <h1 class="py-4 text-center" data-aos="fade-up" data-aos-duration="400">Formulário</h1>
+        <h1 class="pt-4 text-center" data-aos="fade-up" data-aos-duration="400">Formulário <br>
+            <h6 class="text-center" data-aos="fade-up" data-aos-duration="400">Consulte disponibilidade na sua região</h6>
+        </h1>
         <form id="form" class="mx-3" method="post">
             <div data-aos="fade-up" class="mb-2">
                 <label for="nome" class="form-label">Nome Completo</label>

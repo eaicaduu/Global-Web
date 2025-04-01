@@ -79,8 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('scroll', updateNavbar);
 
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const savedTheme = localStorage.getItem("darkMode");
-    const darkMode = savedTheme === "enabled";
+    const darkMode = savedTheme ? savedTheme === "enabled" : prefersDarkMode;
     applyTheme(darkMode);
 
     theme.addEventListener("click", function () {

@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
+    let carouselElement = document.getElementById("imageCarousel");
+    let carousel = new bootstrap.Carousel(carouselElement, {
+        interval: 5000,
+        ride: "carousel"
+    });
+
     function showSplashScreen() {
         const splashScreen = document.createElement('div');
         splashScreen.id = 'splash-screen';
@@ -33,4 +40,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     showSplashScreen();
+    
 });

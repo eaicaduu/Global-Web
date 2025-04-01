@@ -184,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
         icon: "error",
         title: "Oops...",
         text: "Preencha todos os campos obrigatórios!",
+        confirmButtonColor: "#007bff"
       });
       return;
     }
