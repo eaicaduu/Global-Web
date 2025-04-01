@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.cookie = name + "=" + value + ";" + expires + ";path=/";
     }
 
-    if (getCookie("cookies_aceitos")) {
+    if (!getCookie("cookies_aceitos")) {
         const banner = document.createElement("div");
         banner.id = "cookieBanner";
         banner.classList.add("d-none");

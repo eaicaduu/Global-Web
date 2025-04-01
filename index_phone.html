@@ -24,6 +24,7 @@
     <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/window.js"></script>
     <script src="js/alert.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/screen.js"></script>
@@ -450,13 +451,3 @@
 </body>
 
 </html>
-<script>
-    function verificarLargura() {
-        if (window.innerWidth > 1000 && !window.location.href.includes('index.html')) {
-            window.location.href = 'index.html';
-        }
-    }
-
-    verificarLargura();
-    window.addEventListener('resize', verificarLargura);
-</script>

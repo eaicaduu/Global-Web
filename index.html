@@ -25,13 +25,14 @@
   <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/window.js"></script>
   <script src="js/alert.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/screen.js"></script>
   <script src="js/cookies.js"></script>
 
   <div id="main-content" style="display: none;">
-</div>
+  </div>
 
   <header>
     <nav id="navbar" class="navbar fixed-top shadow">
@@ -156,7 +157,7 @@
 
       <div class="d-flex justify-content-evenly">
 
-        <div data-aos="flip-left" data-aos-duration="700" class="border bg-white rounded p-4 shadow-sm ms-2" style="width: 300px; ">
+        <div data-aos="flip-left" data-aos-duration="700" class="border bg-white rounded p-4 shadow-sm ms-2">
           <div class="d-flex align-items-start justify-content-between">
             <div class="d-flex flex-column">
               <div class="d-flex align-items-center ms-2">
@@ -200,7 +201,7 @@
         </div>
         </div>
 
-        <div data-aos="flip-left" data-aos-duration="700" class="border bg-white rounded p-4 shadow-sm ms-2" style="width: 300px; ">
+        <div data-aos="flip-left" data-aos-duration="700" class="border bg-white rounded p-4 shadow-sm ms-2">
           <div class="d-flex align-items-start justify-content-between">
             <div class="d-flex flex-column">
               <div class="d-flex align-items-center ms-2">
@@ -244,7 +245,7 @@
         </div>
         </div>
 
-        <div data-aos="flip-left" data-aos-duration="700" class="border bg-white rounded p-4 shadow-sm ms-2" style="width: 300px; ">
+        <div data-aos="flip-left" data-aos-duration="700" class="border bg-white rounded p-4 shadow-sm ms-2">
           <div class="d-flex align-items-start justify-content-between">
             <div class="d-flex flex-column">
               <div class="d-flex align-items-center ms-2">
@@ -288,7 +289,7 @@
         </div>
         </div>
 
-        <div data-aos="flip-left" data-aos-duration="700" class="border bg-white rounded p-4 shadow-sm ms-2" style="width: 300px; ">
+        <div data-aos="flip-left" data-aos-duration="700" class="border bg-white rounded p-4 shadow-sm ms-2">
           <div class="d-flex align-items-start justify-content-between">
             <div class="d-flex flex-column">
               <div class="d-flex align-items-center ms-2">
@@ -445,15 +446,3 @@
 </body>
 
 </html>
-<script>
-
-  function verificarLargura() {
-    if (window.innerWidth <= 1000 && !window.location.href.includes('index_phone.html')) {
-      window.location.href = 'index_phone.html';
-    }
-  }
-
-  verificarLargura();
-  window.addEventListener('resize', verificarLargura);
-
-</script>
