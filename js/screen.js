@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         const logo = document.createElement('img');
         logo.src = 'images/logo_global.png'; 
+        logo.classList = 'pe-none';
         logo.width = 300;
         splashScreen.appendChild(logo);
     
@@ -34,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
             splashScreen.style.overflow = 'hidden';
             setTimeout(function () {
                 splashScreen.style.display = 'none';
-                document.getElementById('main-content').style.display = 'none'; 
             }, 500);
         }, 1500); 
     }
