@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         splashScreen.style.alignItems = 'center';
         splashScreen.style.zIndex = '9999';
         splashScreen.style.transition = 'opacity 0.5s ease-out'; 
-
+        document.body.style.overflow = 'hidden';
     
         const logo = document.createElement('img');
         logo.src = 'images/logo_global.png'; 
@@ -32,9 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(function () {
             splashScreen.style.opacity = '0'; 
+            document.body.style.overflow = '';
             splashScreen.style.overflow = 'hidden';
             setTimeout(function () {
                 splashScreen.style.display = 'none';
+            
             }, 500);
         }, 1500); 
     }

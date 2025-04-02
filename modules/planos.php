@@ -1,55 +1,65 @@
-
 <aside>
-    <div class="p-4 text-change">
+    <div class="py-4">
 
-      <div class="d-flex justify-content-start">
+        <div class="d-flex justify-content-evenly" style="overflow-x: auto; white-space: nowrap;">
 
-        <div  class="border bg-white rounded p-4 shadow-sm ms-2">
-          <div class="d-flex align-items-start justify-content-between">
-            <div class="d-flex flex-column">
-              <div class="d-flex align-items-center ms-2">
-                  <h1 class="text-primary fw-bold me-1">900</h1>
-                  <span class="text-primary">MEGAS</span>
-              </div>
-              <h6 class="text-primary ms-2">Plano Ultra</h6>
-          </div>
-            <img src="images/wifi_dark_24dp.png" class="pe-none theme-icon" width="50px" height="50px">
-          </div>
+            <div class="container d-flex justify-content-center align-items-center my-5">
+                <div class="card shadow-lg border-0 rounded-4 p-4 text-center"
+                    style="max-width: 400px; background: linear-gradient(135deg, #007bff, #003f7f); color: white;">
 
-          <div class="text-start text-black ms-2">
-            <h4>
-              <span class="fs-6">Oferta por</span> <br>
-              <span class="fs-5">R$</span>
-              <span id="valor100" class="fs-1">179,90</span>
-              <br>
-              <span class="fs-6">Até o vencimento</span>
-            </h4>
-          </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="images/wifi_dark_24dp.png" class="pe-none mb-3" width="60" height="60">
+                        <h1 class="fw-bold display-4">900</h1>
+                        <span class="fs-5 text-uppercase">MEGAS</span>
+                        <h6 class="fw-light mt-2">Plano Ultra</h6>
+                    </div>
 
-          <div class="d-flex justify-content-start align-items-center mb-3">
-            <a href="https://api.whatsapp.com/send?phone=5551991437617" style="text-decoration: none;">
-              <button class="btn btn-warning rounded-pill text-white fw-bold d-flex align-items-center">
-                <img src="images/whatsapp.png" class="me-2" width="20" height="20"><span>Contratar</span>
-              </button>
-            </a>
+                    <hr class="border-light my-4">
+
+                    <div>
+                        <h4>
+                            <span class="fs-6">Oferta por</span> <br>
+                            <span class="fs-5">R$</span>
+                            <span class="display-5">179,90</span>
+                            <span class="fs-6">/mês</span>
+                            <br>
+                            <span class="fs-6">Até o vencimento</span>
+                        </h4>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=5551991437617"
+                        class="btn btn-warning w-100 rounded-pill fw-bold mt-4 py-2 d-flex align-items-center justify-content-center shadow-lg"
+                        style="color: white; text-decoration: none; font-size: 1.2rem;">
+                        <img src="images/whatsapp.png" class="me-2" width="24" height="24"> Contratar
+                    </a>
+
+                    <div class="border-top border-light mt-4 pt-3">
+                        <div class="d-flex mb-2 justify-content-center">
+                            <img src="images/play.png" width="20px" height="20px" class="pe-none me-1">
+                            <h6>Streaming</h6>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <img src="images/logo_max.png" style="border-radius: 10px;" width="100"
+                                class="pe-none bg-primary py-4 px-3">
+                            <img src="images/logo_telecine.png" style="border-radius: 10px;" width="120"
+                                class="pe-none bg-primary py-4 px-2 ms-2">
+                        </div>
+                        <div class="d-flex">
+                            <img src="images/logo_combate.png" style="border-radius: 10px;" width="120"
+                                class="pe-none bg-primary py-4 px-3">
+                            <img src="images/logo_panamout.png" style="border-radius: 10px;" width="100"
+                                class="pe-none bg-primary ms-2">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <img src="images/streaming.png" class="pe-none" width="200" class="mt-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
-          <div class="border-top pt-3">
-            <div class="d-flex flex-column justify-content-around align-items-center">
-              <div class="d-flex justify-content-between align-items-center pb-2">
-                  <img src="images/telecine.png" width="120" height="20">
-                  <img src="images/max.png" class="ms-3" width="80" height="20">
-              </div>
-              <div class="d-flex justify-content-between align-items-center pb-2">
-                  <img src="images/panamount.png" width="110" height="30">
-                  <img src="images/combate.png" width="120" height="20" class="ms-2">
-              </div>
-              <img src="images/streaming.png" width="180">
-          </div>
-        </div>
-        </div>
-        
-      </div>
     </div>
 
-  </aside>
+</aside>
