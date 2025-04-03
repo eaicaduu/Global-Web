@@ -30,9 +30,14 @@
     <script src="js/images.js"></script>
     <script src="js/screen.js"></script>
     <script src="js/alert.js"></script>
+    <script src="js/buttons.js"></script>
 
     <?php include 'modules/nav.php'; ?>
     <?php include 'modules/images.php'; ?>
     <?php include 'modules/buttons.php'; ?>
+
+    <?php include 'modules/footer.php'; ?>
+
+    <?php include 'modules/whatsapp.php'; ?>
 
 </body>
