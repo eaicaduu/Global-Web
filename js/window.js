@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.getElementById("link");
     const apps = document.getElementById("app");
+    const planos = document.getElementById("planos");
     let imagens = document.querySelectorAll("#imageCarousel .carousel-item img");
 
     function load() {
         if (window.innerWidth <= 992) {
+        planos.classList.add("d-none");
         buttons.classList.add("d-none");
         apps.classList.add("d-none");
             imagens[0].src = "images/mobile-1.png";
@@ -16,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             imagens[1].src = "images/desktop-2.png";
             imagens[2].src = "images/desktop-3.png";
             imagens[3].src = "images/desktop-4.png";
+        planos.classList.remove("d-none");
         buttons.classList.remove("d-none");
         apps.classList.remove("d-none");
         }

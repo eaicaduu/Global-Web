@@ -123,14 +123,41 @@ function instrucoes5() {
   })
 }
 
+function requestsuport() {
+  Swal.fire({
+    html: `
+      <h3 style="font-weight: bold;">Escolha o Tipo de Suporte</h3> <br>
+      Selecione uma das opções abaixo:
+      <br><br>
+           <div class="d-flex flex-column gap-3">
+        <a href="https://api.whatsapp.com/send?phone=5551985761735&text=Olá,%20preciso%20de%20suporte%20técnico"
+          target="_blank" class="btn btn-primary w-100 fw-bold fs-5 d-flex align-items-center justify-content-center">
+          <i class="bi bi-tools me-2"></i> Suporte Técnico
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5551989708546&text=Olá,%20preciso%20de%20suporte%20financeiro"
+          target="_blank" class="btn btn-success w-100 fw-bold fs-5 d-flex align-items-center justify-content-center">
+          <i class="bi bi-cash-coin me-2"></i> Suporte Financeiro
+        </a>
+      </div>
+      <br>
+      <button onclick="Swal.close();" class="btn btn-danger w-100 fw-bold">Fechar</button>
+    `,
+    showCancelButton: false,
+    showConfirmButton: false,
+    allowOutsideClick: true,
+    allowEscapeKey: true
+});
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 
   AOS.init({
     duration: 500,
   });
 
-  const button = document.getElementById('testconn');
-  if (button) {
-    button.addEventListener('click', instrucoes1);
-  }
+  const testconn = document.getElementById('testconn');
+  const suport = document.getElementById('suport');
+  testconn.addEventListener('click', instrucoes1);
+  suport.addEventListener('click', requestsuport);
+
 });
