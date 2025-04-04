@@ -1,6 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
+.zoom-image {
+  transition: transform 0.3s ease;
+}
+
+.zoom-image:hover {
+  transform: scale(1.2);
+}
+
+.offcanvas {
+  transition: transform 0.3s ease-in-out;
+}
+.navbar .nav-link {
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out; 
+  border-bottom: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  color: var(--bs-primary); 
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 ::-webkit-scrollbar {
 width: 10px; 
 }
@@ -17,11 +56,25 @@ background: #0d6efd;
 background: #0d6efd;
 }
 
+
+body, hr, .navbar, .theme-icon, .text-change, .nav-link {
+  transition: background-color 0.2s ease-in-out;
+}
+
 * {
   box-sizing: border-box;
   border: none;
   padding: 0px;
   margin: 0px;
   font-family: "Poppins";
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
 }
 

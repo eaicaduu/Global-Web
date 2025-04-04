@@ -1,6 +1,6 @@
 <footer class="bg-dark text-white py-4">
     <div class="container">
-        <div class="row text-center text-md-start">
+        <div class="row text-center text-lg-start">
             <!-- Coluna 1: Sobre a Empresa -->
             <div class="col-md-6 mb-3">
                 <h5 class="fw-bold">Sobre Nós</h5>
@@ -17,7 +17,7 @@
             <div class="col-md-6 mb-3">
                 <h5 class="fw-bold">Fale Conosco</h5>
                 <p class="small mb-1"><i class="bi bi-envelope"></i> admin@globalnetprovedor.com</p>
-                <div class="d-flex flex-column flex-md-row small text-center text-md-start">
+                <div class="d-flex flex-column flex-md-row small text-center text-lg-start">
                     <p class="mb-1 mb-md-0 me-md-3">
                         <i class="bi bi-telephone"></i> (51) 3041-3330
                     </p>

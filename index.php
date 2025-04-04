@@ -27,14 +27,14 @@
     <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/images.js"></script>
     <script src="js/screen.js"></script>
     <script src="js/alert.js"></script>
-    <script src="js/buttons.js"></script>
+    <script src="js/window.js"></script>
 
     <?php include 'modules/nav.php'; ?>
     <?php include 'modules/images.php'; ?>
     <?php include 'modules/buttons.php'; ?>
+    <?php include 'modules/app.php'; ?>
 
     <?php include 'modules/footer.php'; ?>
 
